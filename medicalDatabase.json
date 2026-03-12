@@ -1,0 +1,1008 @@
+[	
+  {
+    "id": 1,
+    "category": "Diabetes",
+    "keywords": ["diabetes", "high sugar", "blood sugar"],
+    "patient_question": "What are the symptoms of diabetes?",
+    "doctor_reply": "Common symptoms include increased thirst, frequent urination, fatigue, slow wound healing, and blurred vision.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 2,
+    "category": "Diabetes",
+    "keywords": ["manage diabetes", "control sugar"],
+    "patient_question": "How is diabetes treated?",
+    "doctor_reply": "Treatment includes lifestyle changes, blood sugar monitoring, oral medications, and insulin therapy if required.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 3,
+    "category": "Heart",
+    "keywords": ["heart attack", "cardiac arrest", "chest pain"],
+    "patient_question": "What are the signs of a heart attack?",
+    "doctor_reply": "Severe chest pain, shortness of breath, sweating, nausea, and pain spreading to arm or jaw require immediate emergency care.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 4,
+    "category": "Heart",
+    "keywords": ["blood pressure", "hypertension"],
+    "patient_question": "What is normal blood pressure?",
+    "doctor_reply": "Normal blood pressure is approximately 120/80 mmHg.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 5,
+    "category": "Respiratory",
+    "keywords": ["asthma", "wheezing", "breathing difficulty"],
+    "patient_question": "What are asthma symptoms?",
+    "doctor_reply": "Wheezing, breathlessness, chest tightness, and coughing are common symptoms.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 6,
+    "category": "Respiratory",
+    "keywords": ["pneumonia", "lung infection"],
+    "patient_question": "What are symptoms of pneumonia?",
+    "doctor_reply": "High fever, cough with mucus, chest pain, and difficulty breathing.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 7,
+    "category": "Neurology",
+    "keywords": ["stroke", "paralysis", "face drooping"],
+    "patient_question": "How do I recognize a stroke?",
+    "doctor_reply": "Sudden weakness, facial drooping, slurred speech, and confusion require immediate emergency attention.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 8,
+    "category": "General",
+    "keywords": ["fever", "high temperature"],
+    "patient_question": "What should I do for fever?",
+    "doctor_reply": "Rest, stay hydrated, and take paracetamol if needed. Seek medical advice if fever lasts more than 3 days.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 9,
+    "category": "General",
+    "keywords": ["headache", "migraine"],
+    "patient_question": "What causes frequent headaches?",
+    "doctor_reply": "Headaches may be caused by stress, dehydration, lack of sleep, or migraines.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 10,
+    "category": "Digestive",
+    "keywords": ["stomach pain", "gastric"],
+    "patient_question": "What causes stomach pain?",
+    "doctor_reply": "Indigestion, gas, infections, ulcers, or food intolerance may cause stomach pain.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 11,
+    "category": "Digestive",
+    "keywords": ["diarrhea", "loose motion"],
+    "patient_question": "How to treat diarrhea?",
+    "doctor_reply": "Stay hydrated with ORS, eat light food, and consult a doctor if it persists for more than 2 days.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 12,
+    "category": "Allergy",
+    "keywords": ["allergic reaction", "rash"],
+    "patient_question": "What are signs of allergic reaction?",
+    "doctor_reply": "Rashes, itching, swelling, and sneezing are common allergic reactions.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 13,
+    "category": "Allergy",
+    "keywords": ["anaphylaxis", "severe allergy"],
+    "patient_question": "What is anaphylaxis?",
+    "doctor_reply": "Anaphylaxis is a severe allergic reaction causing breathing difficulty and low blood pressure. It is a medical emergency.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 14,
+    "category": "Mental Health",
+    "keywords": ["depression", "sadness"],
+    "patient_question": "What are signs of depression?",
+    "doctor_reply": "Persistent sadness, lack of interest, sleep changes, and low energy may indicate depression.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 15,
+    "category": "Mental Health",
+    "keywords": ["anxiety", "panic attack"],
+    "patient_question": "What are symptoms of anxiety?",
+    "doctor_reply": "Restlessness, rapid heartbeat, sweating, and constant worry are common symptoms.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 16,
+    "category": "Infection",
+    "keywords": ["covid", "coronavirus"],
+    "patient_question": "What are COVID-19 symptoms?",
+    "doctor_reply": "Fever, cough, fatigue, sore throat, and loss of taste or smell.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 17,
+    "category": "Infection",
+    "keywords": ["malaria", "mosquito fever"],
+    "patient_question": "What are malaria symptoms?",
+    "doctor_reply": "High fever with chills, sweating, headache, and body pain.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 18,
+    "category": "Infection",
+    "keywords": ["dengue", "platelets"],
+    "patient_question": "What are dengue symptoms?",
+    "doctor_reply": "High fever, severe headache, joint pain, rash, and low platelet count.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 19,
+    "category": "Women Health",
+    "keywords": ["pregnancy", "morning sickness"],
+    "patient_question": "Is nausea normal in pregnancy?",
+    "doctor_reply": "Yes, morning sickness is common during early pregnancy.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 20,
+    "category": "Women Health",
+    "keywords": ["irregular periods"],
+    "patient_question": "What causes irregular periods?",
+    "doctor_reply": "Hormonal imbalance, stress, PCOS, or thyroid issues may cause irregular cycles.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 21,
+    "category": "Child Health",
+    "keywords": ["child fever"],
+    "patient_question": "What to do if my child has fever?",
+    "doctor_reply": "Monitor temperature, give prescribed medicine, and consult pediatrician if fever is high.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 22,
+    "category": "Orthopedic",
+    "keywords": ["back pain"],
+    "patient_question": "What causes lower back pain?",
+    "doctor_reply": "Poor posture, muscle strain, or disc problems can cause back pain.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 23,
+    "category": "Orthopedic",
+    "keywords": ["fracture", "broken bone"],
+    "patient_question": "How do I know if I have a fracture?",
+    "doctor_reply": "Severe pain, swelling, and inability to move the limb may indicate fracture.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 24,
+    "category": "Kidney",
+    "keywords": ["kidney stone"],
+    "patient_question": "What are kidney stone symptoms?",
+    "doctor_reply": "Severe side pain, blood in urine, nausea, and frequent urination.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 25,
+    "category": "Skin",
+    "keywords": ["acne"],
+    "patient_question": "How can I treat acne?",
+    "doctor_reply": "Maintain skin hygiene, avoid oily products, and use prescribed creams.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 26,
+    "category": "Eye",
+    "keywords": ["blurred vision"],
+    "patient_question": "What causes blurred vision?",
+    "doctor_reply": "It may be due to refractive errors, diabetes, or eye infections.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 27,
+    "category": "ENT",
+    "keywords": ["ear pain"],
+    "patient_question": "What causes ear pain?",
+    "doctor_reply": "Ear infection, wax buildup, or sinus problems may cause ear pain.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 28,
+    "category": "ENT",
+    "keywords": ["sore throat"],
+    "patient_question": "How to treat sore throat?",
+    "doctor_reply": "Gargle warm salt water and take prescribed medication if needed.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 29,
+    "category": "General",
+    "keywords": ["fatigue"],
+    "patient_question": "Why do I feel tired all the time?",
+    "doctor_reply": "Lack of sleep, anemia, stress, or thyroid issues can cause fatigue.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 30,
+    "category": "General",
+    "keywords": ["immunity"],
+    "patient_question": "How to boost immunity?",
+    "doctor_reply": "Eat balanced diet, exercise regularly, sleep well, and manage stress.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 31,
+    "category": "Thyroid",
+    "keywords": ["thyroid symptoms"],
+    "patient_question": "What are thyroid disorder symptoms?",
+    "doctor_reply": "Weight changes, fatigue, hair loss, and mood changes.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 32,
+    "category": "Liver",
+    "keywords": ["jaundice"],
+    "patient_question": "What are jaundice symptoms?",
+    "doctor_reply": "Yellowing of skin and eyes, dark urine, and fatigue.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 33,
+    "category": "Emergency",
+    "keywords": ["unconscious"],
+    "patient_question": "What to do if someone becomes unconscious?",
+    "doctor_reply": "Call emergency services immediately and check breathing.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 34,
+    "category": "Poisoning",
+    "keywords": ["food poisoning"],
+    "patient_question": "What are food poisoning symptoms?",
+    "doctor_reply": "Vomiting, diarrhea, stomach cramps, and fever.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 35,
+    "category": "Emergency",
+    "keywords": ["seizure"],
+    "patient_question": "What should I do during a seizure?",
+    "doctor_reply": "Keep the person safe, lay them on their side, and seek emergency help.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 36,
+    "category": "Skin",
+    "keywords": ["eczema", "itchy skin"],
+    "patient_question": "What are symptoms of eczema?",
+    "doctor_reply": "Dry, itchy, inflamed skin with redness and irritation.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 37,
+    "category": "Skin",
+    "keywords": ["fungal infection", "ringworm"],
+    "patient_question": "How to treat fungal skin infection?",
+    "doctor_reply": "Use antifungal creams and maintain hygiene. Consult a doctor if it spreads.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 38,
+    "category": "Bone Health",
+    "keywords": ["osteoporosis"],
+    "patient_question": "What is osteoporosis?",
+    "doctor_reply": "Osteoporosis is a condition where bones become weak and fragile.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 39,
+    "category": "Bone Health",
+    "keywords": ["joint pain", "arthritis"],
+    "patient_question": "What causes joint pain?",
+    "doctor_reply": "Arthritis, injury, or inflammation can cause joint pain.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 40,
+    "category": "Heart",
+    "keywords": ["palpitations", "fast heartbeat"],
+    "patient_question": "What causes heart palpitations?",
+    "doctor_reply": "Stress, caffeine, anxiety, or heart rhythm disorders may cause palpitations.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 41,
+    "category": "Lung",
+    "keywords": ["tuberculosis", "tb"],
+    "patient_question": "What are tuberculosis symptoms?",
+    "doctor_reply": "Persistent cough, weight loss, fever, and night sweats.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 42,
+    "category": "Kidney",
+    "keywords": ["urine infection", "uti"],
+    "patient_question": "What are UTI symptoms?",
+    "doctor_reply": "Burning urination, frequent urge, lower abdominal pain.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 43,
+    "category": "Liver",
+    "keywords": ["fatty liver"],
+    "patient_question": "What is fatty liver disease?",
+    "doctor_reply": "It is accumulation of fat in liver cells, often linked to obesity and diabetes.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 44,
+    "category": "Dental",
+    "keywords": ["tooth pain"],
+    "patient_question": "What causes toothache?",
+    "doctor_reply": "Tooth decay, infection, or gum disease can cause tooth pain.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 45,
+    "category": "Dental",
+    "keywords": ["bleeding gums"],
+    "patient_question": "Why do my gums bleed?",
+    "doctor_reply": "Poor oral hygiene or gum disease may cause bleeding gums.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 46,
+    "category": "Women Health",
+    "keywords": ["pcos"],
+    "patient_question": "What is PCOS?",
+    "doctor_reply": "PCOS is a hormonal disorder causing irregular periods and ovarian cysts.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 47,
+    "category": "Women Health",
+    "keywords": ["breast lump"],
+    "patient_question": "What should I do if I find a breast lump?",
+    "doctor_reply": "Consult a doctor immediately for evaluation and possible imaging tests.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 48,
+    "category": "Men Health",
+    "keywords": ["prostate"],
+    "patient_question": "What are prostate enlargement symptoms?",
+    "doctor_reply": "Frequent urination, weak urine flow, and difficulty starting urination.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 49,
+    "category": "Neurology",
+    "keywords": ["epilepsy"],
+    "patient_question": "What is epilepsy?",
+    "doctor_reply": "Epilepsy is a neurological condition causing recurrent seizures.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 50,
+    "category": "Mental Health",
+    "keywords": ["insomnia"],
+    "patient_question": "What causes insomnia?",
+    "doctor_reply": "Stress, anxiety, depression, or poor sleep habits may cause insomnia.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 51,
+    "category": "Nutrition",
+    "keywords": ["vitamin deficiency"],
+    "patient_question": "What are signs of vitamin deficiency?",
+    "doctor_reply": "Fatigue, hair loss, weak immunity, and brittle nails.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 52,
+    "category": "Blood",
+    "keywords": ["anemia"],
+    "patient_question": "What are anemia symptoms?",
+    "doctor_reply": "Fatigue, pale skin, shortness of breath, and dizziness.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 53,
+    "category": "Blood",
+    "keywords": ["low platelets"],
+    "patient_question": "What causes low platelet count?",
+    "doctor_reply": "Infections, dengue, or bone marrow disorders may reduce platelets.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 54,
+    "category": "Eye",
+    "keywords": ["red eyes"],
+    "patient_question": "What causes red eyes?",
+    "doctor_reply": "Allergies, infections, or dryness may cause red eyes.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 55,
+    "category": "Eye",
+    "keywords": ["cataract"],
+    "patient_question": "What is cataract?",
+    "doctor_reply": "Cataract is clouding of the eye lens leading to blurred vision.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 56,
+    "category": "Child Health",
+    "keywords": ["vaccination"],
+    "patient_question": "Why are vaccinations important for children?",
+    "doctor_reply": "Vaccines protect children from serious infectious diseases.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 57,
+    "category": "Child Health",
+    "keywords": ["measles"],
+    "patient_question": "What are measles symptoms?",
+    "doctor_reply": "High fever, rash, cough, and red eyes.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 58,
+    "category": "General",
+    "keywords": ["dehydration"],
+    "patient_question": "What are signs of dehydration?",
+    "doctor_reply": "Dry mouth, dark urine, dizziness, and fatigue.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 59,
+    "category": "Emergency",
+    "keywords": ["burn injury"],
+    "patient_question": "What to do in case of burns?",
+    "doctor_reply": "Cool the burn with running water and seek medical help if severe.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 60,
+    "category": "Emergency",
+    "keywords": ["snake bite"],
+    "patient_question": "What should I do if bitten by a snake?",
+    "doctor_reply": "Stay calm, immobilize the limb, and reach emergency care immediately.",
+    "risk_level": "High",
+    "emergency": true
+  },
+
+  {
+    "id": 61,
+    "category": "Respiratory",
+    "keywords": ["bronchitis"],
+    "patient_question": "What is bronchitis?",
+    "doctor_reply": "Bronchitis is inflammation of airways causing cough and mucus production.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 62,
+    "category": "Respiratory",
+    "keywords": ["shortness of breath"],
+    "patient_question": "What causes shortness of breath?",
+    "doctor_reply": "Asthma, heart problems, lung infection, or anxiety may cause breathlessness.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 63,
+    "category": "Digestive",
+    "keywords": ["ulcer"],
+    "patient_question": "What are ulcer symptoms?",
+    "doctor_reply": "Burning stomach pain, bloating, nausea, and vomiting.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 64,
+    "category": "Digestive",
+    "keywords": ["acid reflux"],
+    "patient_question": "What causes acid reflux?",
+    "doctor_reply": "Overeating, spicy food, obesity, and weak lower esophageal sphincter.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 65,
+    "category": "General",
+    "keywords": ["weight loss"],
+    "patient_question": "What causes sudden weight loss?",
+    "doctor_reply": "Thyroid disorders, diabetes, infections, or stress may cause weight loss.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 66,
+    "category": "General",
+    "keywords": ["weight gain"],
+    "patient_question": "What causes sudden weight gain?",
+    "doctor_reply": "Hormonal imbalance, thyroid issues, or lifestyle changes.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 67,
+    "category": "Cancer",
+    "keywords": ["cancer warning signs"],
+    "patient_question": "What are general warning signs of cancer?",
+    "doctor_reply": "Unexplained weight loss, persistent pain, unusual bleeding, or lumps should be evaluated.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 68,
+    "category": "Cancer",
+    "keywords": ["lung cancer"],
+    "patient_question": "What are lung cancer symptoms?",
+    "doctor_reply": "Persistent cough, chest pain, breathlessness, and coughing blood.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 69,
+    "category": "Heart",
+    "keywords": ["high cholesterol"],
+    "patient_question": "What causes high cholesterol?",
+    "doctor_reply": "Unhealthy diet, obesity, genetics, and lack of exercise.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 70,
+    "category": "General",
+    "keywords": ["heat stroke"],
+    "patient_question": "What are heat stroke symptoms?",
+    "doctor_reply": "High body temperature, confusion, dry skin, and fainting require emergency care.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 71,
+    "category": "Endocrine",
+    "keywords": ["hypothyroidism"],
+    "patient_question": "What are symptoms of hypothyroidism?",
+    "doctor_reply": "Fatigue, weight gain, cold intolerance, dry skin, and depression are common symptoms.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 72,
+    "category": "Endocrine",
+    "keywords": ["hyperthyroidism"],
+    "patient_question": "What are symptoms of hyperthyroidism?",
+    "doctor_reply": "Weight loss, rapid heartbeat, sweating, anxiety, and tremors.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 73,
+    "category": "Heart",
+    "keywords": ["low blood pressure"],
+    "patient_question": "What are symptoms of low blood pressure?",
+    "doctor_reply": "Dizziness, fainting, blurred vision, and weakness.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 74,
+    "category": "Emergency",
+    "keywords": ["fainting"],
+    "patient_question": "What should I do if someone faints?",
+    "doctor_reply": "Lay the person flat, elevate legs, and seek medical care if they do not regain consciousness quickly.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 75,
+    "category": "Blood",
+    "keywords": ["high hemoglobin"],
+    "patient_question": "What causes high hemoglobin levels?",
+    "doctor_reply": "Dehydration, smoking, or underlying lung or heart conditions.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+
+  {
+    "id": 76,
+    "category": "Skin",
+    "keywords": ["psoriasis"],
+    "patient_question": "What is psoriasis?",
+    "doctor_reply": "Psoriasis is an autoimmune condition causing thick, scaly skin patches.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 77,
+    "category": "Eye",
+    "keywords": ["glaucoma"],
+    "patient_question": "What is glaucoma?",
+    "doctor_reply": "Glaucoma is increased eye pressure that can damage the optic nerve.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 78,
+    "category": "ENT",
+    "keywords": ["sinusitis"],
+    "patient_question": "What are sinusitis symptoms?",
+    "doctor_reply": "Facial pain, nasal congestion, headache, and thick nasal discharge.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 79,
+    "category": "Men Health",
+    "keywords": ["erectile dysfunction"],
+    "patient_question": "What causes erectile dysfunction?",
+    "doctor_reply": "Stress, diabetes, heart disease, or hormonal imbalance.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 80,
+    "category": "Women Health",
+    "keywords": ["menopause"],
+    "patient_question": "What are menopause symptoms?",
+    "doctor_reply": "Hot flashes, mood changes, night sweats, and irregular periods.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 81,
+    "category": "Infection",
+    "keywords": ["typhoid"],
+    "patient_question": "What are typhoid symptoms?",
+    "doctor_reply": "High fever, weakness, abdominal pain, and constipation or diarrhea.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 82,
+    "category": "Infection",
+    "keywords": ["chickenpox"],
+    "patient_question": "What are chickenpox symptoms?",
+    "doctor_reply": "Itchy rash, fever, fatigue, and body aches.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 83,
+    "category": "Lung",
+    "keywords": ["copd"],
+    "patient_question": "What is COPD?",
+    "doctor_reply": "Chronic Obstructive Pulmonary Disease is a progressive lung disease causing breathing difficulty.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 84,
+    "category": "Heart",
+    "keywords": ["angina"],
+    "patient_question": "What is angina?",
+    "doctor_reply": "Angina is chest pain caused by reduced blood flow to the heart.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 85,
+    "category": "Kidney",
+    "keywords": ["chronic kidney disease"],
+    "patient_question": "What are symptoms of chronic kidney disease?",
+    "doctor_reply": "Swelling in legs, fatigue, changes in urination, and nausea.",
+    "risk_level": "High",
+    "emergency": true
+  },
+
+  {
+    "id": 86,
+    "category": "Digestive",
+    "keywords": ["appendicitis"],
+    "patient_question": "What are appendicitis symptoms?",
+    "doctor_reply": "Severe lower right abdominal pain, fever, nausea, and vomiting.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 87,
+    "category": "Digestive",
+    "keywords": ["hepatitis"],
+    "patient_question": "What are hepatitis symptoms?",
+    "doctor_reply": "Jaundice, fatigue, abdominal pain, dark urine, and nausea.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 88,
+    "category": "Neurology",
+    "keywords": ["parkinson"],
+    "patient_question": "What are Parkinson’s disease symptoms?",
+    "doctor_reply": "Tremors, stiffness, slow movement, and balance problems.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 89,
+    "category": "Neurology",
+    "keywords": ["alzheimer"],
+    "patient_question": "What are Alzheimer’s disease symptoms?",
+    "doctor_reply": "Memory loss, confusion, difficulty speaking, and behavior changes.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 90,
+    "category": "Emergency",
+    "keywords": ["electric shock"],
+    "patient_question": "What to do in case of electric shock?",
+    "doctor_reply": "Turn off power source, do not touch directly, and seek emergency medical help.",
+    "risk_level": "High",
+    "emergency": true
+  },
+
+  {
+    "id": 91,
+    "category": "Emergency",
+    "keywords": ["road accident"],
+    "patient_question": "What should I do after a road accident?",
+    "doctor_reply": "Ensure safety, call emergency services, and avoid moving injured persons unnecessarily.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 92,
+    "category": "General",
+    "keywords": ["food allergy"],
+    "patient_question": "What are food allergy symptoms?",
+    "doctor_reply": "Itching, swelling, stomach pain, vomiting, or breathing difficulty.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 93,
+    "category": "Nutrition",
+    "keywords": ["protein deficiency"],
+    "patient_question": "What are signs of protein deficiency?",
+    "doctor_reply": "Muscle weakness, swelling, hair thinning, and fatigue.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 94,
+    "category": "Blood",
+    "keywords": ["high blood sugar"],
+    "patient_question": "What are symptoms of high blood sugar?",
+    "doctor_reply": "Increased thirst, frequent urination, blurred vision, and fatigue.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 95,
+    "category": "Blood",
+    "keywords": ["low blood sugar"],
+    "patient_question": "What are symptoms of low blood sugar?",
+    "doctor_reply": "Shaking, sweating, confusion, and dizziness.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 96,
+    "category": "Skin",
+    "keywords": ["hives"],
+    "patient_question": "What causes hives?",
+    "doctor_reply": "Allergic reactions, stress, infections, or medications.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 97,
+    "category": "Eye",
+    "keywords": ["eye infection"],
+    "patient_question": "What are eye infection symptoms?",
+    "doctor_reply": "Redness, discharge, itching, and blurred vision.",
+    "risk_level": "Medium",
+    "emergency": false
+  },
+  {
+    "id": 98,
+    "category": "Respiratory",
+    "keywords": ["common cold"],
+    "patient_question": "What are common cold symptoms?",
+    "doctor_reply": "Sneezing, runny nose, sore throat, and mild fever.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 99,
+    "category": "General",
+    "keywords": ["body pain"],
+    "patient_question": "What causes body pain?",
+    "doctor_reply": "Viral infections, muscle strain, or stress may cause body pain.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 100,
+    "category": "General",
+    "keywords": ["prevent disease"],
+    "patient_question": "How can I prevent common diseases?",
+    "doctor_reply": "Maintain hygiene, balanced diet, exercise regularly, vaccinate, and get regular health checkups.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+
+  {
+    "id": 101,
+    "category": "Emergency",
+    "keywords": ["breathing stopped"],
+    "patient_question": "What should I do if someone stops breathing?",
+    "doctor_reply": "Call emergency services immediately and start CPR if trained.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 102,
+    "category": "Emergency",
+    "keywords": ["severe bleeding"],
+    "patient_question": "What to do in case of severe bleeding?",
+    "doctor_reply": "Apply firm pressure to the wound and seek emergency care immediately.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 103,
+    "category": "General",
+    "keywords": ["health checkup"],
+    "patient_question": "How often should I get a health checkup?",
+    "doctor_reply": "Adults should get annual health checkups or as advised by their doctor.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 104,
+    "category": "Heart",
+    "keywords": ["arrhythmia"],
+    "patient_question": "What is arrhythmia?",
+    "doctor_reply": "Arrhythmia is an irregular heartbeat that may require medical evaluation.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 105,
+    "category": "General",
+    "keywords": ["healthy lifestyle"],
+    "patient_question": "What is a healthy lifestyle?",
+    "doctor_reply": "Balanced diet, regular exercise, adequate sleep, stress control, and avoiding tobacco.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 106,
+    "category": "Mental Health",
+    "keywords": ["suicidal thoughts"],
+    "patient_question": "What should I do if I have suicidal thoughts?",
+    "doctor_reply": "Seek immediate help from a mental health professional or call emergency support services.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 107,
+    "category": "Emergency",
+    "keywords": ["poison ingestion"],
+    "patient_question": "What should I do if someone swallows poison?",
+    "doctor_reply": "Call emergency services immediately and do not induce vomiting unless advised by professionals.",
+    "risk_level": "High",
+    "emergency": true
+  },
+  {
+    "id": 108,
+    "category": "General",
+    "keywords": ["sleep hygiene"],
+    "patient_question": "How can I improve my sleep?",
+    "doctor_reply": "Maintain a fixed sleep schedule, reduce screen time before bed, and avoid caffeine late in the day.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 109,
+    "category": "Nutrition",
+    "keywords": ["balanced diet"],
+    "patient_question": "What is a balanced diet?",
+    "doctor_reply": "A diet containing carbohydrates, proteins, fats, vitamins, and minerals in proper proportion.",
+    "risk_level": "Low",
+    "emergency": false
+  },
+  {
+    "id": 110,
+    "category": "General",
+    "keywords": ["stress management"],
+    "patient_question": "How can I manage stress?",
+    "doctor_reply": "Practice relaxation techniques, exercise regularly, and seek support if needed.",
+    "risk_level": "Low",
+    "emergency": false
+  }
+]

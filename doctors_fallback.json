@@ -1,0 +1,342 @@
+{
+  "Delhi": [
+    {
+      "name": "Indraprastha Apollo Hospitals",
+      "specialty": "Multispeciality",
+      "hospital": "Apollo Hospitals",
+      "open": "24 hours",
+      "address": "Mathura Road, Sarita Vihar, New Delhi",
+      "maps_link": "https://www.google.com/maps/place/Indraprastha+Apollo+Hospital+%7C+Best+Hospital+in+Delhi/@28.5406218,77.2830957,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce6ad13eaaa99:0x3bc07ad476bc6d77!8m2!3d28.5406218!4d77.2830957!16s%2Fg%2F1tnpjcxm?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "https://www.apollohospitals.com/hospitals/apollo-hospitals-delhi"
+    },
+    {
+      "name": "AIIMS",
+      "specialty": "Multispeciality",
+      "hospital": "AIIMS New Delhi",
+      "open": "9.30am to 5,15 pm",
+      "address": "AIIMS Out Patient Department, Ansari Nagar East, New Delhi, Delhi 110029",
+      "maps_link": "https://www.google.com/maps/place/AIIMS+Hospital/@28.5655141,77.2049705,16z/data=!4m10!1m2!2m1!1sAIIMS+New+Delhi+Hospital!3m6!1s0x390ce30052d020b3:0xf65f7d536265ecb2!8m2!3d28.5655141!4d77.2093479!15sChhBSUlNUyBOZXcgRGVsaGkgSG9zcGl0YWxaGiIYYWlpbXMgbmV3IGRlbGhpIGhvc3BpdGFskgERZ292ZXJubWVudF9vZmZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRPYVdNd1pIWlpWMDUyVlROR1YweFlaRFJpZWxad1QwVmFjVlZHUlJBQuABAPoBBAgAEC0!16s%2Fg%2F11y3px59xg?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "https://aiims.edu"
+    },
+    {
+      "name": "Park Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Park Hospital",
+      "open": "24 hours",
+      "address": "Bus Depot, Meera Enclave Outer Ring Road Near Kashopur, New Chaukhandi, Vishnu Garden, New Delhi, Delhi 110018",
+      "maps_link": "https://www.google.com/maps/place/Park+Hospital/@28.651782,76.9530903,11z/data=!4m10!1m2!2m1!1sdelhi+hospitals!3m6!1s0x390d0486068a92a3:0xb5d36c0ba16eb195!8m2!3d28.651782!4d77.093166!15sCg9kZWxoaSBob3NwaXRhbHNaESIPZGVsaGkgaG9zcGl0YWxzkgEQcHJpdmF0ZV9ob3NwaXRhbOABAA!16s%2Fg%2F11b7m97022?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.parkhospital.in/hospital/super-multispeciality-hospital-in-delhi?utm_source=GMB-Organic&utm_medium=gmb&utm_campaign=delhi-profile"
+    },
+    {
+      "name": "CK Birla Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "CK Birla Hospital",
+      "open": "24 hours",
+      "address": "57/41, West Punjabi Bagh, Punjabi Bagh, New Delhi, Delhi, 110026",
+      "maps_link": "https://www.google.com/maps/place/CK+Birla+Hospital,+Delhi/@28.6675337,76.991816,11z/data=!4m10!1m2!2m1!1sdelhi+hospitals!3m6!1s0x390d03552412e88d:0x41cdf3e3f531217b!8m2!3d28.6675337!4d77.1318917!15sCg9kZWxoaSBob3NwaXRhbHNaESIPZGVsaGkgaG9zcGl0YWxzkgEIaG9zcGl0YWzgAQA!16s%2Fg%2F11rcdhndpn?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.ckbhospital.com/delhi/?utm_source=google&utm_medium=ckbhdelhi&utm_campaign=gmb_profile"
+    },
+    {
+      "name": "Lok Nayak Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Lok Nayak Hospital",
+      "open": "24 hours",
+      "address": "metro Station Central, Jawaharlal Nehru Marg, near Delhi Gate, New Delhi, Delhi 110002",
+      "maps_link": "https://www.google.com/maps/place/Lok+Nayak+Hospital,Delhi/@28.6852735,77.1605693,11z/data=!4m10!1m2!2m1!1sdelhi+hospitals!3m6!1s0x390cfd27b3316b6d:0xa9d62fda6be69577!8m2!3d28.6388746!4d77.2382208!15sCg9kZWxoaSBob3NwaXRhbHNaESIPZGVsaGkgaG9zcGl0YWxzkgETZ292ZXJubWVudF9ob3NwaXRhbOABAA!16s%2Fg%2F11dxdhkb8b?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://lnjp.delhi.gov.in/"
+    },
+    {
+      "name": "Delhi Multispeciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Delhi Multispeciality Hospital",
+      "open": "24 hours",
+      "address": "I-21, Vijay Vihar Phase II, Vijay Vihar, Sector 4, Rohini, Delhi, 110085",
+      "maps_link": "https://www.google.com/maps/place/DELHI+MULTI+SPECIALITY+HOSPITAL/@28.7118178,76.9547184,11z/data=!4m10!1m2!2m1!1sdelhi+hospitals!3m6!1s0x390d06aef7ac4177:0xacd81a55e6d7dbce!8m2!3d28.7118178!4d77.0947941!15sCg9kZWxoaSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F11c2nbsntj?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.delhimshospital.com/"
+    }
+  ],
+  "Pune": [
+    {
+      "name": "Jehangir Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Jehangir Hospital",
+      "open": "24 hours",
+      "address": "32, Sasoon Rd, opposite Railway Station, Central Excise Colony, Sangamvadi, Pune, Maharashtra 411001",
+      "maps_link": "https://www.google.com/maps/place/Jehangir+Hospital/@18.5303207,73.8768111,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c05816d29283:0xfe98c3452724e113!8m2!3d18.5303207!4d73.8768111!16s%2Fm%2F09v3j2y?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "http://www.jehangirhospital.com/"
+    },
+     {
+      "name": "Orchid Speciality Hospital",
+      "specialty": "General Medicine",
+      "hospital": "Orchid Speciality",
+      "open": "Open 24 hours",
+      "address": "L-Square, Off. Dhanori Jakat Naka, Sr. No. - 282/3/3, Porwal Rd, Lohegaon, Pune, Maharashtra 411047",
+      "maps_link": "https://www.google.com/maps/place/AIIMS+Hospital/@28.5655141,77.2049705,16z/data=!4m10!1m2!2m1!1sAIIMS+New+Delhi+Hospital!3m6!1s0x390ce30052d020b3:0xf65f7d536265ecb2!8m2!3d28.5655141!4d77.2093479!15sChhBSUlNUyBOZXcgRGVsaGkgSG9zcGl0YWxaGiIYYWlpbXMgbmV3IGRlbGhpIGhvc3BpdGFskgERZ292ZXJubWVudF9vZmZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRPYVdNd1pIWlpWMDUyVlROR1YweFlaRFJpZWxad1QwVmFjVlZHUlJBQuABAPoBBAgAEC0!16s%2Fg%2F11y3px59xg?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "https://www.justdial.com/online-consult/hospital?action=BA&extRdt=1&wkwebview=1&docid=020PXX20.XX20.160331101747.F8G4&hl=en-IN&gei=hoiMafLHKJf7seMPvKLkgAY&rwg_token=AFd1xnHJeonErMyO3aLg-QgqcBdPM3wYdLQIc2BeGjmQSvSDZlDhS6b8W1gx6EsnNFlH4Ce9wt_0C3Sc76vobhJbFjB63v9pLg%3D%3D"
+    },
+    {
+      "name": "Manipal Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Manipal Hospital",
+      "open": "Open 24 hours",
+      "address": "22/2A, Mundhwa - Kharadi Rd, near Nyati Empire, Santipur, Thite Nagar, Kharadi, Pune, Maharashtra 411014",
+      "maps_link": "https://www.google.com/maps/place/AIIMS+Hospital/@28.5655141,77.2049705,16z/data=!4m10!1m2!2m1!1sAIIMS+New+Delhi+Hospital!3m6!1s0x390ce30052d020b3:0xf65f7d536265ecb2!8m2!3d28.5655141!4d77.2093479!15sChhBSUlNUyBOZXcgRGVsaGkgSG9zcGl0YWxaGiIYYWlpbXMgbmV3IGRlbGhpIGhvc3BpdGFskgERZ292ZXJubWVudF9vZmZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRPYVdNd1pIWlpWMDUyVlROR1YweFlaRFJpZWxad1QwVmFjVlZHUlJBQuABAPoBBAgAEC0!16s%2Fg%2F11y3px59xg?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "https://www.manipalhospitals.com/kharadi/"
+    },
+    {
+      "name": "ASG Eye Hospital",
+      "specialty": "Eye care Center",
+      "hospital": "Eye hospital",
+      "open": "9 am to 8 pm",
+      "address": "2 &3, Plot No. 557 / 1, Fergusson College Rd, Bhamburda, Shivajinagar, Pune, Maharashtra 411005",
+      "maps_link": "https://www.google.com/maps/place/AIIMS+Hospital/@28.5655141,77.2049705,16z/data=!4m10!1m2!2m1!1sAIIMS+New+Delhi+Hospital!3m6!1s0x390ce30052d020b3:0xf65f7d536265ecb2!8m2!3d28.5655141!4d77.2093479!15sChhBSUlNUyBOZXcgRGVsaGkgSG9zcGl0YWxaGiIYYWlpbXMgbmV3IGRlbGhpIGhvc3BpdGFskgERZ292ZXJubWVudF9vZmZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRPYVdNd1pIWlpWMDUyVlROR1YweFlaRFJpZWxad1QwVmFjVlZHUlJBQuABAPoBBAgAEC0!16s%2Fg%2F11y3px59xg?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
+      "website": "https://asgeyehospital.com/hospital/shivajinagar-pune"
+    },
+    {
+      "name": "K K Multispeciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Jupiter Hospital",
+      "open": "24 Hours",
+      "address": "Alandi-Markal Rd, near JALARAM MANDIR, Alandi, Pune, Maharashtra 412105",
+      "maps_link": "https://www.google.com/maps/place/K+K+MULTISPECIALITY+HOSPITAL/@18.6768291,73.8313743,12z/data=!4m10!1m2!2m1!1spune+hospitals!3m6!1s0x3bc2c9fe8ae3848f:0xb5bf9e33f2eae23b!8m2!3d18.6768291!4d73.9014121!15sCg5wdW5lIGhvc3BpdGFsc1oQIg5wdW5lIGhvc3BpdGFsc5IBCGhvc3BpdGFsmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJJYmpreWMxZEJFQUXgAQD6AQQIABBC!16s%2Fg%2F11rckwhf9x?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://kkhospitalalandi.com/"
+    },
+    {
+    "name": "Sahyadri Super Speciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Sahyadri Hospital",
+      "open": "24 Hours",
+      "address": "Pune Nagar Rd, near HERMES HERITAGE, Hermes Heritage Society Phase 1, Shastrinagar, Yerawada, Pune, Maharashtra 411006",
+      "maps_link": "https://www.google.com/maps/place/Sahyadri+Super+Speciality+Hospital+Nagar+Road/@18.5686338,73.863399,12z/data=!4m10!1m2!2m1!1spune+hospitals!3m6!1s0x3bc2c1b586a30977:0x83beefa066ed5e4!8m2!3d18.5541881!4d73.8970055!15sCg5wdW5lIGhvc3BpdGFsc1oQIg5wdW5lIGhvc3BpdGFsc5IBCGhvc3BpdGFs4AEA!16s%2Fg%2F11gk7ns0c9?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://sahyadrihospital.com/nagar-road/?utm_source=Google&utm_medium=Organic&utm_campaign=GMB"
+    },
+    {
+    "name": "Aai mother & Child care  Hospital",
+      "specialty": "Mother & Child",
+      "hospital": "Aai Hospital",
+      "open": "24 Hours",
+      "address": "Manthan Complex , D wing , survey, 51, Dehu - Alandi Rd, Dudulgaon, Maharashtra 412105",
+      "maps_link": "https://www.google.com/maps/place/Aai+mother+%26+Child+care+Hospital/@18.5686338,73.863399,12z/data=!4m9!1m2!2m1!1spune+hospitals!3m5!1s0x3bc2c991a34bca4b:0x9f7ec622fe67f70f!8m2!3d18.6742269!4d73.8848738!16s%2Fg%2F11rpdcrcx7?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.9922190800.com/"
+    }
+  ],
+  "Mumbai": [
+    {
+      "name": "Zen Multi Speciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Zen Multi Speciality Hospital",
+      "open": "24 hours",
+      "address": "Plot No, 425, 10th Rd, near Sandu Garden, Jai Ambe Nagar, Chembur Gaothan, Chembur, Mumbai, Maharashtra 400071",
+      "maps_link": "https://www.google.com/maps/place/Zen+Multi+Speciality+Hospital,+Chembur,+Mumbai/@19.0558779,72.6166406,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7c8a713dba9db:0x547737c184116596!8m2!3d19.0558779!4d72.896792!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSARBnZW5lcmFsX2hvc3BpdGFs4AEA!16s%2Fg%2F11bxfr2cfk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.zenhospital.in/"
+    },
+     {
+      "name": "Fortis S L Raheja Hospital",
+      "specialty": "General Medicine",
+      "hospital": "Fortis S L Raheja",
+      "open": "Open 24 hours",
+      "address": "Raheja Rugnalaya Marg, Mahim West, Mahim, Mumbai, Maharashtra 400016",
+      "maps_link": "https://www.google.com/maps/place/Fortis+S+L+Raheja+Hospital+-+Best+Hospital+in+Mumbai/@19.0462839,72.5625278,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7c92f84c13ec9:0x807c1cbf1b5e8536!8m2!3d19.0462839!4d72.8426792!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1thz03zj?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.rahejahospital.com/?utm_source=google-gmb&utm_medium=gmb-seo-url&utm_campaign=FHL-gmb"
+    },
+    {
+      "name": "CritiCare Asia Multispeciality",
+      "specialty": "Multispeciality",
+      "hospital": "CritiCare Asia Multispeciality",
+      "open": "Open 24 hours",
+      "address": "J.V.P.D Plot Number 38/39, Main, Gulmohar Road, Andheri West, Mumbai, Maharashtra 400049",
+      "maps_link": "https://www.google.com/maps/place/CritiCare+Asia+Multispeciality+Hospital/@19.1156416,72.5552268,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7b61874cbfe41:0x9f48d184173e1649!8m2!3d19.1156416!4d72.8353782!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1td0wynk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.criticareasiahospital.com/"
+    },
+    {
+      "name": "Narayana Health SRCC Children's",
+      "specialty": "Children",
+      "hospital": "Narayana Health SRCC Children's",
+      "open": "24 hours",
+      "address": "managed by Narayana Health, Nh Srcc Children's Hospital, 1-1A, Keshavrao Khadye Marg, Haji Ali, Haji Ali Government Colony, Mahalakshmi, Mumbai, Maharashtra 400034",
+      "maps_link": "https://www.google.com/maps/place/Narayana+Health+SRCC+Children's+Hospital,+Mumbai/@18.9791956,72.5326591,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7ce7ba69677b1:0x1ccfbe82b0fe3246!8m2!3d18.9791956!4d72.8128105!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSARJjaGlsZHJlbnNfaG9zcGl0YWzgAQA!16s%2Fg%2F1tznkt_f?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.narayanahealth.org/hospitals/mumbai/srcc-childrens-hospital/?utm_source=Googlemaps&utm_medium=GMB"
+    },
+    {
+      "name": "Platinum  Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Platinum  Hospital",
+      "open": "24 Hours",
+      "address": "Neptune Colorscape, Dumping Rd, Siddharth Nagar, Mulund West, Mumbai, Maharashtra 400080",
+      "maps_link": "https://www.google.com/maps/place/Platinum+Hospital+Mulund+-+Best+Cardiologist+in+Mumbai+-+Best+Orthopedic+in+Mumbai/@19.1826625,72.6742077,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7b97456d2174d:0x1212bf04f8da7ec0!8m2!3d19.1826625!4d72.9543591!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F11gzscmcd?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.platinumhospitalmulund.com/"
+    },
+    {
+    "name": "Medicover Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Medicover Hospital",
+      "open": "24 Hours",
+      "address": "23PG+MH2, Sector 10, Kharghar, Navi Mumbai, Maharashtra 410210",
+      "maps_link": "https://www.google.com/maps/place/Medicover+Hospitals+-+Best+Hospital+in+Navi+Mumbai/@19.0852051,72.9167146,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7c327a8ee3533:0x9643f9b9881e129!8m2!3d19.0364353!4d73.0764242!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F11swppkqk6?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.medicoverhospitals.in/hospitals/maharashtra/navi-mumbai/?utm_source=google&utm_medium=organic&utm_campaign=gmb-navi-mumbai"
+    },
+    {
+    "name": "Kapadia Multispeciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Kapadia Multispeciality Hospital",
+      "open": "24 Hours",
+      "address": "Mahatma Gandhi Rd, Shri Nagar, Goregaon West, Mumbai, Maharashtra 400104",
+      "maps_link": "https://www.google.com/maps/place/Kapadia+Multispeciality+Hospital/@19.1630706,72.563259,10z/data=!4m10!1m2!2m1!1sMumbai+hospitals!3m6!1s0x3be7b651c5a20165:0xff6224e34b72ab51!8m2!3d19.1630706!4d72.8434104!15sChBNdW1iYWkgaG9zcGl0YWxzWhIiEG11bWJhaSBob3NwaXRhbHOSARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F11b6chr9p7?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://kapadiahospital.com/"
+    }
+  ],
+  "Odisha": [
+    {
+      "name": "Apollo Hospitals | Best Hospital in Bhubaneswar",
+      "specialty": "Multispeciality",
+      "hospital": "Apollo Hospitals",
+      "open": "24 hours",
+      "address": "Unit 15, Plot No 251, Sainik School Rd, Bhubaneswar, Odisha",
+      "maps_link": "https://www.google.com/maps/place/Apollo+Hospitals+%7C+Best+Hospital+in+Bhubaneswar/@20.3057727,85.5518426,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a19090e8bcb53ab:0xe496034aa2878d00!8m2!3d20.3057727!4d85.831994!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1hm3jg_hn?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.apollohospitals.com/hospitals/apollo-hospitals-bhubaneswar"
+    },
+    {
+      "name": "UTKAL HOSPITAL",
+      "specialty": "Private Hospital",
+      "hospital": "Utkal Hospital",
+      "open": "24 hours",
+      "address": "Defence Colony Rd, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021",
+      "maps_link": "https://www.google.com/maps/place/UTKAL+HOSPITAL/@20.3225785,85.5202764,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a190856d2434299:0x584e864fb095095d!8m2!3d20.3225785!4d85.8004278!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F11byl8r_wx?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://utkalhospital.com/"
+    },
+    {
+      "name": "SUM Ultimate Medicare Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "SUM Ultimate Medicare",
+      "open": "24 hours",
+      "address": "K8 Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha 751029",
+      "maps_link": "https://www.google.com/maps/place/SUM+Ultimate+Medicare+Hospital+bhubaneswar/@20.2830483,85.4923992,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a190931a7cca02f:0x4c17f98d78633bd4!8m2!3d20.2830483!4d85.7725506!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F11fj4yb_fz?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://sumum.soahospitals.com/"
+    },
+    {
+      "name": "Manipal Hospitals, Bhubaneswar",
+      "specialty": "Multispeciality",
+      "hospital": "Manipal Hospitals",
+      "open": "24 hours",
+      "address": "Plot No.1 Besides, Satyasai Enclave Rd, Khandagiri, Bhubaneswar, Shankarpur, Odisha 751030",
+      "maps_link": "https://www.google.com/maps/place/Manipal+Hospitals,+Bhubaneswar/@20.2600734,85.4971967,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a19a7e89acea029:0x1480b31512dd0d21!8m2!3d20.2600734!4d85.7773481!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F124t4r7kk?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.manipalhospitals.com/bhubaneswar/?utm_source=GMB&utm_medium=Click&utm_campaign=manipal_hospitals_bhubaneswar"
+    },
+    {
+      "name": "CARE Hospitals, Bhubaneswar",
+      "specialty": "Multispeciality",
+      "hospital": "CARE Hospitals",
+      "open": "24 hours",
+      "address": "Unit No. 42, Plot 324, Prachi Enclave Rd, Bhubaneswar, Odisha",
+      "maps_link": "https://www.google.com/maps/place/CARE+Hospitals,+Bhubaneswar/@20.3216241,85.5329644,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a190909f29f075d:0xd3b1c0dc055f67c4!8m2!3d20.3216241!4d85.8131158!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1tdd87ww?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D8",
+      "website": "https://www.carehospitals.com/hospitals/bhubaneswar/"
+    },
+    {
+      "name": "Sunshine Hospital",
+      "specialty": "Private Hospital",
+      "hospital": "Sunshine Hospital",
+      "open": "24 hours",
+      "address": "371, Cuttack - Puri Rd, Bhubaneswar, Odisha",
+      "maps_link": "https://www.google.com/maps/place/Sunshine+Hospital/@20.2691196,85.568468,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a19a74d20e9c753:0xac674e49051b0bfb!8m2!3d20.2691196!4d85.8486194!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F11cm3pwd3_?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://sunshineodisha.com/"
+    },
+    {
+      "name": "Aditya Ashwini Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Aditya Ashwini Hospital",
+      "open": "24 hours",
+      "address": "Plot 329, 8RJG+539 Kalyan Mandap, 1929, Sri Arbindonagar Rd, near BMC, Sri Aurobindo Nagar, Chandrasekharpur, Bhubaneswar, Odisha 751017",
+      "maps_link": "https://www.google.com/maps/place/Aditya+Ashwini+Hospital/@20.3301763,85.5422299,10z/data=!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a19095ccb02589d:0x51910ad7f6d87f09!8m2!3d20.3301763!4d85.8223813!15sChBvZGlzaGEgaG9zcGl0YWxzkgEIaG9zcGl0YWzgAQA!16s%2Fg%2F11h_f623d4?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://www.ashwinihospitalcuttack.com/aditya-ashwini-hospital/"
+    },
+    {
+      "name": "Shree Hospitals",
+      "specialty": "General Hospital",
+      "hospital": "Shree Hospitals",
+      "open": "24 hours",
+      "address": "246, Lewis Rd, Bhubaneswar, Odisha",
+      "maps_link": "https://www.google.com/maps/place/Shree+Hospitals/@20.2483092,85.5612988,10z/data=!3m1!5s0x3a1909e4a7f34d3d:0x6c0564aa9ac45048!4m10!1m2!2m1!1sodisha+hospitals!3m6!1s0x3a19a731afd1734d:0xc503db3a9d1d0a54!8m2!3d20.2483092!4d85.8414502!15sChBvZGlzaGEgaG9zcGl0YWxzWhIiEG9kaXNoYSBob3NwaXRhbHOSARBnZW5lcmFsX2hvc3BpdGFs4AEA!16s%2Fg%2F11bwhb3rkw?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.shreehospitals.com/"
+    }
+    ],
+     "Latur": [
+    {
+      "name": "Alpha Superspeciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Alpha Superspeciality Hospital",
+      "open": "24 hours",
+      "address": "Ambajogai Road, Shyam Nagar Rd, near Muktai Mangal Karyalay, Latur",
+      "maps_link": "https://www.google.com/maps/place/Alpha+Superspeciality+Hospital/@18.4051786,76.5302897,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83e9143f3c45:0xcc5efd20dfd1f234!8m2!3d18.4051786!4d76.5653086!15sCg9sYXR1ciBob3NwaXRhbHNaESIPbGF0dXIgaG9zcGl0YWxzkgEIaG9zcGl0YWzgAQA!16s%2Fg%2F1tdzv56z?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://alphahospital.com/"
+    },
+    {
+      "name": "Latur Superspeciality Hospital Pvt. Ltd",
+      "specialty": "Superspeciality",
+      "hospital": "Latur Superspeciality Hospital Pvt. Ltd",
+      "open": "24 hours",
+      "address": "CJ65+F4J, Latur Superspeciality Hospital PVT.LTD Survey No.55, 1, Nanded Rd, Maharanapratapnagar, Latur, Maharashtra 413512",
+      "maps_link": "https://www.google.com/maps/place/Latur+Superspeciality+Hospital+Pvt.Ltd/@18.4000689,76.5713293,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf836564d2d561:0xf895e9db189f1cf3!8m2!3d18.4125101!4d76.6089233!15sCg9sYXR1ciBob3NwaXRhbHOSAQZkb2N0b3LgAQA!16s%2Fg%2F1tqtwbk8?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.laturcancerhospital.com/"
+    },
+    {
+      "name": "Shashwat Hospital Latur",
+      "specialty": "Hospital",
+      "hospital": "Shashwat Hospital",
+      "open": "24 hours",
+      "address": "Prakash Nagar, Sanvidhan Chowk, Latur, Maharashtra 413531",
+      "maps_link": "https://www.google.com/maps/place/Shashwat+Hospital+Latur/@18.4042279,76.517861,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83c286a02819:0x36887e377622e003!8m2!3d18.4042279!4d76.5528799!15sCg9sYXR1ciBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F11st9zkt_g?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "name": "Dr. S. B. Gugale Memorial Hospital",
+      "specialty": "Hospital",
+      "hospital": "Dr. S. B. Gugale Memorial Hospital",
+      "open": "24 hours",
+      "address": "MG Rd, opp. LDCC Bank, Latur",
+      "maps_link": "https://www.google.com/maps/place/Dr.+S.+B.+Gugale+Memorial+Hospital/@18.3986974,76.5378782,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83d8ea0e41af:0x421355c0f587d927!8m2!3d18.3986974!4d76.5728971!15sCg9sYXR1ciBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1263z71ts?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://gugalehospital.com/"
+    },
+    {
+      "name": "Jaju Hospital",
+      "specialty": "Orthopedic",
+      "hospital": "Jaju Hospital",
+      "open": "24 hours",
+      "address": "Ausa Rd, Deshpande Colony, Latur, Maharashtra 413531",
+      "maps_link": "https://www.google.com/maps/place/Jaju+Hospital+%7C+Best+Hospital+in+Latur+%7C+Best+Orthopedic+Hospital+In+Latur/@18.3913075,76.5262026,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83c3433d8669:0x2c2a23c7d386cd48!8m2!3d18.3913075!4d76.5612215!15sCg9sYXR1ciBob3NwaXRhbHNaESIPbGF0dXIgaG9zcGl0YWxzkgERb3J0aG9wZWRpY19jbGluaWPgAQA!16s%2Fg%2F1tg6nl7v?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.jajuhospital.com/"
+    },
+    {
+      "name": "Warad Hospital Latur",
+      "specialty": "Hospital",
+      "hospital": "Warad Hospital",
+      "open": "24 hours",
+      "address": "CH2G+CWW, Khandoba Galli, Sawe Wadi, Latur, Maharashtra 413512",
+      "maps_link": "https://www.google.com/maps/place/WARAD+HOSPITAL+LATUR/@18.4010289,76.5416824,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf8395cd1a6747:0xb7f99bb8e8a171ef!8m2!3d18.4010289!4d76.5767013!15sCg9sYXR1ciBob3NwaXRhbHNaESIPbGF0dXIgaG9zcGl0YWxzkgEIaG9zcGl0YWzgAQA!16s%2Fg%2F11c614b8bc?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "name": "Prabhavati Multispeciality Hospital",
+      "specialty": "Multispeciality",
+      "hospital": "Prabhavati Multispeciality Hospital",
+      "open": "24 hours",
+      "address": "Survey No-252, Ambejogai Road, New Renapur Naka Ambajogai Rd, Latur, Maharashtra 413531",
+      "maps_link": "https://www.google.com/maps/place/Prabhavati+Multispeciality+Hospital+%7C+Cardiology,+Diabetology+%26+Critical+Care,+Rheumatology,+Pulmonology,+in+Latur/@18.4170232,76.5349123,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83f3543c0e65:0x84303aae3c1f1614!8m2!3d18.4170232!4d76.5699312!15sCg9sYXR1ciBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F1tg_vk1w?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "http://www.prabhavatihospital.com/"
+    },
+    {
+      "name": "Trimurti Hospital Latur",
+      "specialty": "Orthopedics / Trauma / Accident",
+      "hospital": "Trimurti Hospital",
+      "open": "24 hours",
+      "address": "MG Rd, beside Malabar Gold Shop, Mitra Nagar, Tilak Nagar, Sawe Wadi, Latur, Maharashtra 413531",
+      "maps_link": "https://www.google.com/maps/place/%F0%9D%97%A7%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%BA%F0%9D%98%82%F0%9D%97%BF%F0%9D%98%81%F0%9D%97%B6+%F0%9D%97%9B%F0%9D%97%BC%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%B9+%F0%9D%97%9F%F0%9D%97%AE%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF+%7C+%F0%9D%97%95%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81+%F0%9D%97%9B%F0%9D%97%BC%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%B9+%F0%9D%97%B6%F0%9D%97%BB+%F0%9D%97%9F%F0%9D%97%AE%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF+%7C+%F0%9D%97%95%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81+%F0%9D%97%A2%F0%9D%97%BF%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%BC%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%B1%F0%9D%97%B6%F0%9D%97%B0%F0%9D%98%80+%F0%9D%97%A7%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%82%F0%9D%97%BA%F0%9D%97%AE+%F0%9D%97%94%F0%9D%97%B0%F0%9D%97%B0%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%B9+%F0%9D%97%9B%F0%9D%97%BC%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%B9+%F0%9D%97%9F%F0%9D%97%AE%F0%9D%98%81%F0%9D%98%82%F0%9D%97%BF/@18.398571,76.5360859,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf832d865551f9:0xc4458a3726a3d04b!8m2!3d18.398571!4d76.5711048!15sCg9sYXR1ciBob3NwaXRhbHNaESIPbGF0dXIgaG9zcGl0YWxzkgEIaG9zcGl0YWzgAQA!16s%2Fg%2F11w985dvtm?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D",
+      "website": "https://drshashikantkukaleortho.com/"
+    },
+    {
+      "name": "Yashodhara Urology Multisuperspeciality Hospital and Laser Centre",
+      "specialty": "Urology",
+      "hospital": "Yashodhara Urology Hospital",
+      "open": "24 hours",
+      "address": "Opposite Bus stand no 2, near Ambajogai Rd, behind Yashoda Theater, Latur",
+      "maps_link": "https://www.google.com/maps/place/YASHODHARA+UROLOGY+MULTISUPERSPECIALITY+HOSPITAL+and+LASER+CENTRE/@18.4091842,76.5336337,13z/data=!4m10!1m2!2m1!1slatur+hospitals!3m6!1s0x3bcf83be22876ea1:0x84624dd9ed9a1953!8m2!3d18.4091842!4d76.5686526!15sCg9sYXR1ciBob3NwaXRhbHOSAQhob3NwaXRhbOABAA!16s%2Fg%2F11h7ktt68b?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D"
+    }
+  ]
+}

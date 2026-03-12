@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SehatGuide AI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Minimal styling for popup & alerts */
+    #popup {
+      position: fixed; top:0; left:0; right:0; bottom:0;
+      display:none; justify-content:center; align-items:center;
+      background: rgba(0,0,0,0.7); z-index:1000;
+    }
+    #popupTitle { font-weight:bold; font-size:1.2em; color:white; margin-bottom:10px; }
+    #popupBody { color:white; }
+    #closePopup { margin-top:15px; padding:5px 10px; }
+    .alert-card { background:#ffeded; padding:10px; border-radius:5px; margin-top:10px; }
+    .vaccine-result, .doctorResult, #symptomResult { margin-top:10px; }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="dot"></span>
+      <span data-i18n="logoText">SehatGuide AI</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#doctorSection">Doctors</a>
+      <a href="#vaccinationSection">Vaccines</a>
+      <a href="#telemedicine">Telemedicine</a>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="hi">हिंदी</button>
+      <button class="lang-btn" data-lang="mr">मराठी</button>
+      <button class="lang-btn" data-lang="ur">اردو</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+    </div>
+  </nav>
+
+  <!-- USER PROFILE -->
+  <div class="userProfileBox">
+    <div class="userInfo">
+      <div id="userName">👤 Guest</div>
+      <div id="userEmail" class="smallText">Not logged in</div>
+    </div>
+    <button class="logoutBtn" onclick="logout()" data-i18n="logoutBtn"> Logout </button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="badges">
+        <span data-i18n="badges1">🌍 Multilingual</span>
+        <span data-i18n="badges2">🧠 AI Powered</span>
+        <span data-i18n="badges3">🏥 Government Verified</span>
+      </div>
+      <h1>
+        <span data-i18n="heroTitle1">AI Health Chatbot for</span><br>
+        <span data-i18n="heroTitle2">Rural & Semi-Urban</span>
+        <span data-i18n="heroTitle3">Communities</span>
+      </h1>
+      <p data-i18n="heroDesc">
+        Educating populations on preventive care, disease symptoms & vaccination schedules with live outbreak alerts.
+      </p>
+      <div class="hero-buttons">
+        <button class="primary" id="startDemoBtn" data-i18n="btnDemo"> ▶ Start Animated Demo </button>
+        <button class="secondary" id="vaccBtn" data-i18n="btnVacc"> 💉 Vaccination Schedule </button>
+        <button class="secondary" id="outbreakBtn" data-i18n="btnOutbreak"> 🚨 Outbreak News </button>
+        <button class="secondary" id="voiceBtn" data-i18n="btnVoiceOn"> 🔊 Voice On </button>
+      </div>
+      <div class="info-strip">
+        <span data-i18n="info1">📶 Low Network Friendly</span>
+      </div>
+
+      <!-- OUTBREAK ALERT -->
+      <div class="alert-card" id="alertCard">
+        <h3 data-i18n="outbreakTitle">🚨 Outbreak Alert</h3>
+        <p id="alertText">
+          Dengue risk increasing in nearby areas. Use mosquito nets and remove stagnant water.
+        </p>
+      </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <div class="chat-card" id="chatCard" style="display:none;">
+      <div class="chat-header">
+        <div class="menu">☰</div>
+        <div class="title" data-i18n="chatTitle">SehatGuide AI Chat</div>
+        <div class="status">🟢 <span data-i18n="onlineText">Online</span></div>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot-msg">
+          👋 Hello! I’m <b>SehatGuide AI</b>. Ask me about symptoms, vaccines, or prevention.
+        </div>
+      </div>
+      <div class="chat-input">
+        <input id="userInput" type="text" placeholder="Type: fever / cough / dengue / vaccine / doctor appointment...">
+        <button id="sendBtn">Send ➤</button>
+      </div>
+    </div>
+<section id="about" class="about-section" style="padding:50px 20px; background: radial-gradient(circle at top, #1c2a6b, #070b18); color:white;">
+
+  <h2 style="text-align:center; margin-bottom:50px; font-size:2.2em;">About SehatGuide AI</h2>
+
+  <!-- Section 1: Intelligent Health Assistant -->
+  <div style="display:flex; align-items:center; gap:30px; margin-bottom:40px; flex-wrap:wrap;">
+    <img src="images/about_ai_assistant.png" alt="AI Health Assistant" 
+         style="width:350px; max-width:100%; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.5);">
+    <div style="flex:1; min-width:250px;">
+      <h3>Intelligent Health Assistant</h3>
+      <p>
+        SehatGuide AI is a <b>smart healthcare chatbot</b> designed to provide fast and reliable guidance on symptoms, preventive care, and vaccination schedules. The system simplifies health information into clear, easy-to-follow advice for everyone.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 2: Community Support -->
+  <div style="display:flex; align-items:center; gap:30px; margin-bottom:40px; flex-wrap:wrap; flex-direction:row-reverse;">
+    <img src="images/about_community_support.png" alt="Rural & Semi-Urban Support" 
+         style="width:350px; max-width:100%; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.5);">
+    <div style="flex:1; min-width:250px;">
+      <h3>Community Support</h3>
+      <p>
+        Focused on bridging healthcare gaps in rural and semi-urban areas. Users receive timely updates, preventive care tips, and outbreak alerts customized to their location. This ensures people stay informed even without frequent access to doctors or hospitals.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 3: Vaccination & Telemedicine -->
+  <div style="display:flex; align-items:center; gap:30px; margin-bottom:40px; flex-wrap:wrap;">
+    <img src="images/about_vaccination_telemedicine.png" alt="Vaccination & Telemedicine" 
+         style="width:350px; max-width:100%; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.5);">
+    <div style="flex:1; min-width:250px;">
+      <h3>Vaccination & Telemedicine</h3>
+      <p>
+        Users can <b>discover nearby vaccination centers</b>, check immunization schedules, search for doctors by specialty and city, and access free telemedicine services. SehatGuide AI empowers communities to take proactive care of their health easily and safely.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+  <!-- VACCINATION -->
+  <section id="vaccinationSection" class="schedule-section">
+    <h2>💉 Vaccination Schedule</h2>
+    <p>Check vaccination schedules in your area:</p>
+    <div class="schedule-box">
+      <input type="text" id="pinInput" placeholder="Enter PIN code">
+      <button onclick="fetchVaccineCenters()">Search</button>
+    </div>
+    <div id="vaccineResult" class="vaccine-result"></div>
+  </section>
+
+  <!-- DOCTOR SEARCH -->
+  <section class="schedule-section" id="doctorSection">
+    <h2>🩺 Doctor Appointments</h2>
+    <p>Search and book appointments with doctors near you.</p>
+    <div class="schedule-box">
+      <select id="specialtySelect">
+        <option value="">All Specialties</option>
+        <option value="General Physician">General Physician</option>
+        <option value="General Medicine">General Medicine</option>
+        <option value="Hospital">Hospital</option>
+        <option value="Homeopath">Homeopath</option>
+        <option value="Diabetologist">Diabetologist</option>
+      </select>
+      <input type="text" id="doctorCityInput" placeholder="Enter your city">
+      <button onclick="searchDoctors()">Search</button>
+    </div>
+    <div id="doctorResult" class="vaccine-result"></div>
+  </section>
+
+  <!-- SYMPTOM CHECKER -->
+  <section class="symptom-section">
+    <div class="symptom-card">
+      <h3>AI Symptom Checker</h3>
+      <p>Enter your symptoms to get basic health advice.</p>
+      <input type="text" id="symptomsInput" placeholder="Example: fever, cough">
+      <button onclick="checkSymptoms()">Analyze Symptoms</button>
+      <div id="symptomResult"></div>
+    </div>
+  </section>
+
+  <!-- TELEMEDICINE -->
+  <section id="telemedicine" class="telemedicine">
+    <h2>Free Options with Real Doctors</h2>
+    <div class="telemedicine-cards">
+      <div class="tele-card">
+        <img src="images/mfine.png">
+        <h3>MFine</h3>
+        <p>Consult real doctors online through MFine platform.</p>
+        <a href="https://www.mfine.co/" target="_blank">Consult Now</a>
+      </div>
+      <div class="tele-card">
+        <img src="images/practo.png">
+        <h3>Practo</h3>
+        <p>Book appointments and consult verified doctors online.</p>
+        <a href="https://www.practo.com/" target="_blank">Consult Now</a>
+      </div>
+      <div class="tele-card">
+        <img src="images/esanjeevani.png">
+        <h3>eSanjeevani</h3>
+        <p>Government free telemedicine consultation service.</p>
+        <a href="https://esanjeevani.mohfw.gov.in/" target="_blank">Consult Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>SehatGuide AI</h3>
+        <p>AI-powered healthcare chatbot helping rural and semi-urban communities with symptom guidance and telemedicine access.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#doctorSection">Doctors</a>
+        <a href="#vaccinationSection">Vaccination</a>
+        <a href="#telemedicine">Telemedicine</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📧 support@sehatguide.ai</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 Pune, India</p>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      ⚠ SehatGuide AI provides general health information only and does not replace professional medical advice.
+    </div>
+    <div class="footer-bottom">© 2026 SehatGuide AI</div>
+  </footer>
+
+  <!-- CHAT TOGGLE -->
+  <div class="chatbot-toggle" onclick="toggleChatbot()"> 💬 </div>
+
+  <!-- JS -->
+  <script src="auth.js"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+
+  <!-- POPUP -->
+<div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000;">
+  <div style="background:#3b4464; color:white; padding:20px; border-radius:10px; max-width:500px; width:90%;">
+    <h3 id="popupTitle">Title</h3>
+    <div id="popupBody" style="margin-top:10px;">Content</div>
+    <button id="closePopup" style="margin-top:15px; padding:5px 10px;">Close</button>
+  </div>
+</div>
+</body>
+</html>
