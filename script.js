@@ -428,4 +428,85 @@ function showPopup(title, body) {
   if(closePopup){
     closePopup.onclick = () => popup.style.display = "none";
   }
+
+}
+
+
+// 1️⃣ Load your fallback medical database
+let medicalDB = {};
+
+async function loadMedicalDB() {
+  try {
+    const res = await fetch("/medicalDatabase.json"); // make sure the path is correct
+    medicalDB = await res.json();
+    console.log("Medical DB loaded", medicalDB);
+  } catch (err) {
+    console.error("Failed to load medical database:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadMedicalDB();
+});
+
+// 2️⃣ Modify sendMessage() to use server first, fallback second
+function sendMessage() {
+  const userInput = document.getElementById("userInput");
+  const msg = userInput.value.trim();
+  if (!msg) return;
+  addMessage("user", msg);
+  userInput.value = "";
+
+  // Try server first
+  fetch("/chat", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ message: msg, lang: selectedLang })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.reply) addMessage("bot", data.reply);
+    else fallbackReply(msg); // use fallback if no server reply
+  })
+  .catch(err => {
+    console.error(err);
+    fallbackReply(msg); // server failed → fallback
+  });
+}
+
+// 3️⃣ Fallback logic using local JSON
+function fallbackReply(msg) {
+  const lowerMsg = msg.toLowerCase();
+  let reply = "🤖 Sorry, I don't understand that.";
+
+  try {
+    if(lowerMsg.includes("vaccine") || lowerMsg.includes("vaccination")) {
+      const pins = Object.keys(medicalDB.vaccineCenters || {});
+      if(pins.length) {
+        const center = medicalDB.vaccineCenters[pins[0]][0];
+        reply = `💉 Vaccine Center:\n${center.name}\nAddress: ${center.address}\nDistrict: ${center.district_name}`;
+      }
+    } else if(lowerMsg.includes("doctor")) {
+      const cities = Object.keys(medicalDB.doctors || {});
+      if(cities.length) {
+        const doc = medicalDB.doctors[cities[0]][0];
+        reply = `🩺 Doctor: ${doc.name}\nSpecialty: ${doc.specialty}\nClinic: ${doc.hospital}`;
+      }
+    } else if(lowerMsg.includes("dengue") || lowerMsg.includes("outbreak")) {
+      reply = "⚠️ Dengue risk increasing in nearby areas. Use mosquito nets and remove stagnant water.";
+    } else {
+      const symptoms = lowerMsg.split(",").map(s => s.trim());
+      const found = medicalDB.diseases?.find(d =>
+        d.symptoms.some(symptom => symptoms.includes(symptom))
+      );
+      if(found) {
+        reply = `Possible Disease: ${found.disease}\nAdvice: ${found.advice}`;
+      }
+    }
+  } catch(err) {
+    console.error(err);
+    reply = "❌ Error processing your request.";
+  }
+
+  addMessage("bot", reply);
 }
