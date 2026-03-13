@@ -4,9 +4,13 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import dotenv from "dotenv";
 import cors from "cors";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import Groq from "groq-sdk";
 
 dotenv.config();
+
+if (!process.env.GROQ_API_KEY) {
+  console.error("❌ GROQ_API_KEY missing in .env file");
+}
 
 const app = express();
 app.use(express.json());
@@ -60,7 +64,7 @@ try {
     fs.readFileSync(path.join(__dirname, "doctors_fallback.json"), "utf-8")
   );
   console.log("✅ doctors_fallback.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ doctors_fallback.json not loaded");
 }
 
@@ -69,7 +73,7 @@ try {
     fs.readFileSync(path.join(__dirname, "vaccine_fallback.json"), "utf-8")
   );
   console.log("✅ vaccine_fallback.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ vaccine_fallback.json not loaded");
 }
 
@@ -78,7 +82,7 @@ try {
     fs.readFileSync(path.join(__dirname, "medicalDatabase.json"), "utf-8")
   );
   console.log("✅ medicalDatabase.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ medicalDatabase.json not loaded");
 }
 
@@ -161,7 +165,7 @@ function checkEmergency(message) {
 }
 
 /* =======================================================
-   SMART DATABASE MATCHING (FIXED)
+   SMART DATABASE MATCHING
 ======================================================= */
 
 function findDatabaseAnswer(message) {
@@ -191,13 +195,11 @@ function findDatabaseAnswer(message) {
 let conversationHistory = {};
 
 /* =======================================================
-   GEMINI SETUP
+   GROQ AI SETUP
 ======================================================= */
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
-const model = genAI.getGenerativeModel({
-  model: "models/gemini-2.5-flash",
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 const langMap = {
@@ -223,7 +225,6 @@ app.post("/chat", async (req, res) => {
       return res.json({ reply: "❌ Message empty" });
     }
 
-    // Initialize memory
     if (!conversationHistory[userId]) {
       conversationHistory[userId] = [];
     }
@@ -237,7 +238,6 @@ app.post("/chat", async (req, res) => {
       conversationHistory[userId].shift();
     }
 
-    // Emergency detection
     if (checkEmergency(message)) {
       return res.json({
         reply:
@@ -245,13 +245,11 @@ app.post("/chat", async (req, res) => {
       });
     }
 
-    // DATABASE CHECK FIRST
     const dbResult = findDatabaseAnswer(message);
     if (dbResult) {
       return res.json({ reply: dbResult.doctor_reply });
     }
 
-    // Gemini AI
     const chatHistoryText = conversationHistory[userId]
       .map((msg) => `${msg.role}: ${msg.content}`)
       .join("\n");
@@ -259,22 +257,34 @@ app.post("/chat", async (req, res) => {
     const languageName = langMap[lang] || "English";
 
     const prompt = `
-You are SehatGuide AI — a friendly doctor chatbot.
+You are SehatGuide AI, a health awareness chatbot.
 
-Reply ONLY in ${languageName}.
-Keep answer short (2-3 lines).
-Ask 1 follow-up question.
-Use simple words.
-Give basic home care advice.
+Rules:
+- Give simple medical guidance.
+- Suggest precautions and home care.
+- DO NOT refuse answering health questions.
+- DO NOT say "I cannot advise".
+- Do not diagnose serious diseases.
+- Always suggest consulting a doctor for serious illness.
+- Reply in ${languageName}.
+- Keep answer short (2-3 lines).
+- Ask 1 follow-up question.
 
 Conversation:
 ${chatHistoryText}
 
-Now reply to the latest message naturally.
+Reply to the latest user message.
 `;
 
-    const result = await model.generateContent(prompt);
-    const reply = result.response.text();
+    const completion = await groq.chat.completions.create({
+  model: "llama-3.1-8b-instant",
+  messages: [
+    { role: "system", content: "You are SehatGuide AI health assistant." },
+    { role: "user", content: prompt }
+  ]
+});
+
+const reply = completion.choices[0].message.content;
 
     conversationHistory[userId].push({
       role: "assistant",
@@ -284,7 +294,7 @@ Now reply to the latest message naturally.
     res.json({ reply });
 
   } catch (err) {
-    console.error("❌ Gemini Error:", err);
+    console.error("❌ Groq Error:", err);
 
     res.status(200).json({
       reply:
