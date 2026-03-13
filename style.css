@@ -606,3 +606,111 @@ background:#ff2e2e;
     gap:60px;
   }
 }
+
+
+/* ================= MOBILE FIX ONLY ================= */
+
+@media (max-width:768px){
+
+/* Navbar spacing */
+.navbar{
+padding:15px 20px;
+flex-wrap:wrap;
+gap:10px;
+}
+
+/* Language buttons wrap */
+.lang-switch{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:8px;
+}
+
+.lang-btn{
+padding:6px 10px;
+font-size:12px;
+}
+
+/* Hide desktop nav links */
+.nav-links{
+display:none;
+}
+
+/* HERO SECTION */
+.hero{
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+gap:30px;
+}
+
+.hero-left, .hero-right{
+max-width:100%;
+flex:1 1 auto;
+}
+
+.hero-left h1{
+font-size:34px;
+}
+
+.hero-left p{
+font-size:16px;
+}
+
+/* Badges center */
+.badges{
+justify-content:center;
+}
+
+/* Buttons center */
+.hero-buttons{
+justify-content:center;
+}
+
+/* INFO STRIP */
+.info-strip{
+justify-content:center;
+}
+
+/* USER PROFILE FIX (MAIN ISSUE) */
+.userProfileBox{
+position:relative;
+top:auto;
+right:auto;
+margin:10px auto;
+width:95%;
+justify-content:space-between;
+}
+
+/* ALERT CARD width */
+.alert-card{
+width:100%;
+}
+
+/* Schedule input stack */
+.schedule-box{
+flex-direction:column;
+}
+
+.schedule-box input,
+.schedule-box select{
+width:100%;
+}
+
+/* Symptom card */
+.symptom-card{
+width:95%;
+}
+
+/* Telemedicine cards */
+.telemedicine-cards{
+flex-direction:column;
+align-items:center;
+}
+
+.tele-card{
+width:90%;
+}
+
+}
