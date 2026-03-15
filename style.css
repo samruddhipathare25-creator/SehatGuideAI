@@ -135,11 +135,6 @@ font-weight:700;
   opacity:0.9;
 }
 
-
-
-
-
-
 /* BADGES */
 
 .badges{
@@ -464,9 +459,7 @@ text-decoration:none;
 border-radius:5px;
 }
 
-
 /* FOOTER */
-
 .footer{
 background:rgba(0,0,0,0.35);
 padding:40px 20px;
@@ -713,4 +706,216 @@ align-items:center;
 width:90%;
 }
 
+}
+
+
+
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:260px;
+  height:100%;
+  background:#111;
+  color:white;
+  padding:20px;
+  transition:0.3s;
+  z-index:2000;
+}
+
+.sidebar a{
+  display:block;
+  padding:12px;
+  color:white;
+  text-decoration:none;
+  border-bottom:1px solid #333;
+}
+
+.sidebar a:hover{
+  background:#222;
+}
+
+.sidebar-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.menu-btn{
+  font-size:22px;
+  cursor:pointer;
+  margin-right:15px;
+}
+
+
+#about,
+#doctorSection,
+#vaccinationSection,
+#AIsymptomcheckersection,
+#telemedicine{
+display:none;
+}
+
+.sidebar-profile{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.sidebar-profile #userName{
+  font-weight:bold;
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.sidebar-profile #userEmail{
+  font-size:12px;
+  opacity:0.8;
+}
+
+.sidebar-profile .logoutBtn{
+  margin-top:10px;
+  padding:6px 10px;
+  border:none;
+  background:#ff4d4d;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.userProfileBox{
+display:none;
+}
+#medicineReminder{
+display:none;
+}
+
+#aisymptomcheckerSection{
+display:none;
+}
+
+.medicine-card{
+background:#1e2746;
+padding:25px;
+border-radius:12px;
+max-width:420px;
+margin:auto;
+color:white;
+}
+
+.medicine-card input,
+.medicine-card select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:none;
+}
+
+.medicine-card button{
+background:#4cafef;
+padding:10px;
+border:none;
+border-radius:6px;
+color:white;
+width:100%;
+cursor:pointer;
+}
+
+#medicineList{
+margin-top:15px;
+}
+
+.medicine-card{
+background:#1e2b4a;
+padding:15px;
+border-radius:12px;
+margin:10px 0;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.med-title{
+font-size:18px;
+font-weight:600;
+}
+
+.med-info{
+opacity:0.8;
+margin-top:4px;
+}
+
+.med-time{
+margin-top:6px;
+font-size:14px;
+color:#9fd4ff;
+}
+
+.med-actions{
+margin-top:10px;
+display:flex;
+gap:10px;
+}
+
+.taken-btn{
+background:#2ecc71;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+.snooze-btn{
+background:#f39c12;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+.medicine-card {
+  background:#1e2746;
+  padding:25px;
+  border-radius:12px;
+  max-width:420px;
+  margin:auto;
+  color:white;
+}
+
+.medicine-card input,
+.medicine-card select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:none;
+}
+
+.medicine-card button{
+  background:#4cafef;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  color:white;
+  width:100%;
+  cursor:pointer;
+  margin-top:5px;
+}
+
+.medicine-item {
+  background:#2b365c;
+  padding:10px;
+  border-radius:8px;
+  margin-top:10px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.medicine-item button {
+  background:#ff6b6b;
+  padding:5px 10px;
+  margin-left:5px;
+  width:auto;
 }
