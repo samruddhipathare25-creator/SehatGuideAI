@@ -510,3 +510,232 @@ function fallbackReply(msg) {
 
   addMessage("bot", reply);
 }
+
+
+/* ===============================
+   SIDEBAR NAVIGATION
+================================*/
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+
+  if (!sidebar) return;
+
+  if (sidebar.style.left === "0px") {
+    sidebar.style.left = "-260px";
+  } else {
+    sidebar.style.left = "0px";
+  }
+}
+
+
+/* ===============================
+   APP STYLE SECTION NAVIGATION
+================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const sections = [
+    "about",
+    "doctorSection",
+    "vaccinationSection",
+    "aisymptomcheckersection",
+    "telemedicine",
+    "medicine-reminder.html"
+  ];
+
+  const sidebarLinks = document.querySelectorAll("#sidebar a");
+
+  sidebarLinks.forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+      e.preventDefault();
+
+      const target = this.getAttribute("href").replace("#", "");
+
+      // hide all sections
+      sections.forEach(id => {
+        const sec = document.getElementById(id);
+        if (sec) sec.style.display = "none";
+      });
+
+      // show selected section
+      const active = document.getElementById(target);
+
+      if (active) {
+        active.style.display = "block";
+        active.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // close sidebar
+      toggleSidebar();
+
+    });
+
+  });
+
+});
+
+
+
+
+function syncSidebarProfile(){
+
+  const mainName = document.getElementById("userName");
+  const mainEmail = document.getElementById("userEmail");
+
+  const sideName = document.getElementById("sidebarUserName");
+  const sideEmail = document.getElementById("sidebarUserEmail");
+
+  if(mainName && sideName){
+    sideName.innerText = mainName.innerText;
+  }
+
+  if(mainEmail && sideEmail){
+    sideEmail.innerText = mainEmail.innerText;
+  }
+
+}
+
+// run after everything loads
+window.addEventListener("load", function(){
+  setTimeout(syncSidebarProfile, 500);
+});
+
+
+
+let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
+
+function addReminder(){
+
+const name = document.getElementById("medicineName").value;
+const time = document.getElementById("medicineTime").value;
+
+if(!name || !time){
+alert("Enter medicine and time");
+return;
+}
+
+reminders.push({name,time});
+
+localStorage.setItem("reminders",JSON.stringify(reminders));
+
+displayReminders();
+
+}
+
+function displayReminders(){
+
+const list = document.getElementById("reminderList");
+
+if(!list) return;
+
+list.innerHTML="";
+
+reminders.forEach(r=>{
+
+list.innerHTML += `
+<div class="reminder-item">
+💊 ${r.name} at ${r.time}
+</div>
+`;
+
+});
+
+}
+
+displayReminders();
+
+
+setInterval(()=>{
+
+const now = new Date();
+
+const currentTime =
+now.getHours().toString().padStart(2,"0")+":"+
+now.getMinutes().toString().padStart(2,"0");
+
+reminders.forEach(r=>{
+
+if(r.time === currentTime){
+
+if(Notification.permission === "granted"){
+
+new Notification("Medicine Reminder",{
+body:"Time to take "+r.name+" 💊"
+});
+
+}
+
+}
+
+});
+
+},60000);
+
+
+if(Notification.permission !== "granted"){
+Notification.requestPermission();
+}
+
+let medicines = [];
+
+function addMedicine() {
+  const name = document.getElementById("medName").value;
+  const dose = document.getElementById("medDose").value;
+  const time = document.getElementById("medTime").value;
+  const food = document.getElementById("foodType").value;
+
+  if(!name || !dose || !time) return alert("Please fill all fields");
+
+  const med = { name, dose, time, food, taken: false };
+  medicines.push(med);
+  renderMedicines();
+
+  // clear inputs
+  document.getElementById("medName").value = '';
+  document.getElementById("medDose").value = '';
+  document.getElementById("medTime").value = '';
+}
+
+function renderMedicines() {
+  const list = document.getElementById("medicineList");
+  list.innerHTML = '';
+
+  medicines.forEach((med, index) => {
+    const div = document.createElement('div');
+    div.className = 'medicine-item';
+
+    div.innerHTML = `
+      <div>
+        💊 <b>${med.name}</b> ${med.dose} • ${med.time} • ${med.food} 
+        ${med.taken ? '✅ Taken' : ''}
+      </div>
+      <div>
+        <button onclick="markTaken(${index})">Taken</button>
+        <button onclick="snooze(${index})">Snooze 5 min</button>
+      </div>
+    `;
+
+    list.appendChild(div);
+  });
+}
+
+function markTaken(index) {
+  medicines[index].taken = true;
+  renderMedicines();
+}
+
+function snooze(index) {
+  let currentTime = medicines[index].time.split(':');
+  let date = new Date();
+  date.setHours(currentTime[0], currentTime[1]);
+  date.setMinutes(date.getMinutes() + 5); // add 5 min
+
+  let h = date.getHours().toString().padStart(2,'0');
+  let m = date.getMinutes().toString().padStart(2,'0');
+
+  medicines[index].time = `${h}:${m}`;
+  renderMedicines();
+}
