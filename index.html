@@ -20,10 +20,39 @@
   </style>
 </head>
 <body>
+  <div id="sidebar" class="sidebar">
+
+  <div class="sidebar-header">
+    <span>SehatGuide AI</span>
+    <button onclick="toggleSidebar()">✕</button>
+  </div>
+ <div class="sidebar-profile">
+    <div id="sidebarUserName">👤 Guest</div>
+    <div id="sidebarUserEmail">Not logged in</div>
+    <button class="logoutBtn" onclick="logout()">Logout</button>
+  </div>
+
+  <hr>
+
+
+
+  <a href="#about">About</a>
+  <a href="#doctorSection">Doctors</a>
+  <a href="#vaccinationSection">Vaccines</a>
+   <a href="#aisymptomcheckerSection">AI Symptom Checker</a>
+   <a href="#medicineReminder">Medicine Reminder</a>
+  <a href="#telemedicine">Telemedicine</a>
+
+</div>
+
+
   <div class="bg"></div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
+
+
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
     <div class="logo">
       <span class="dot"></span>
       <span data-i18n="logoText">SehatGuide AI</span>
@@ -178,7 +207,7 @@
   </section>
 
   <!-- SYMPTOM CHECKER -->
-  <section class="symptom-section">
+  <section id="symptomSection" class="symptom-section"></section>
     <div class="symptom-card">
       <h3>AI Symptom Checker</h3>
       <p>Enter your symptoms to get basic health advice.</p>
@@ -187,6 +216,42 @@
       <div id="symptomResult"></div>
     </div>
   </section>
+
+
+
+
+  <section id="medicineReminder" class="schedule-section">
+
+<div class="medicine-card">
+  
+
+<h2>💊 Medicine Reminder</h2>
+
+<input type="text" id="medName" placeholder="Medicine Name">
+
+<input type="text" id="medDose" placeholder="Dosage (ex: 1 tablet)">
+
+<input type="time" id="medTime">
+
+<select id="foodType">
+<option>Before Food</option>
+<option>After Food</option>
+</select>
+
+<select id="repeatType">
+<option>Once</option>
+<option>Daily</option>
+</select>
+
+<button onclick="addMedicine()">➕ Set Reminder</button>
+
+<h3>Today's Medicines</h3>
+<div id="medicineList"></div>
+<div id="medicineList" class="medicine-list"></div>
+
+</div>
+
+</section>
 
   <!-- TELEMEDICINE -->
   <section id="telemedicine" class="telemedicine">
@@ -247,6 +312,7 @@
   <script src="auth.js"></script>
   <script src="translations.js"></script>
   <script src="script.js"></script>
+  
 
   <!-- POPUP -->
 <div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000;">
@@ -256,5 +322,53 @@
     <button id="closePopup" style="margin-top:15px; padding:5px 10px;">Close</button>
   </div>
 </div>
+
+
+<button onclick="testNotification()">Test Notification</button>
+
+
+<script>
+/* APP STYLE SECTION SWITCH */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const sections = document.querySelectorAll(
+    "#about, #doctorSection, #vaccinationSection, .aisymptomcheckersection, #telemedicine,#medicineReminder"
+  );
+
+  // hide all sections at start
+  sections.forEach(sec=>{
+    sec.style.display = "none";
+  });
+
+  // navigation links
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link=>{
+    link.addEventListener("click", function(e){
+
+      e.preventDefault();
+
+      const target = this.getAttribute("href").replace("#","");
+
+      // hide everything
+      sections.forEach(sec=>{
+        sec.style.display = "none";
+      });
+
+      // show selected
+      const activeSection = document.getElementById(target);
+
+      if(activeSection){
+        activeSection.style.display = "block";
+        activeSection.scrollIntoView({behavior:"smooth"});
+      }
+
+    });
+  });
+
+});
+</script>
+<script type="module" src="firebase.js"></script>
 </body>
 </html>
