@@ -2,16 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js";
 
-// Your Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyC1HbuxatlVcEBjafFU5NWcXTOYoF0KA9U",
-  authDomain: "sehataiguide.firebaseapp.com",
-  projectId: "sehataiguide",
-  storageBucket: "sehataiguide.firebasestorage.app",
-  messagingSenderId: "56986654799",
-  appId: "1:56986654799:web:eba164f34d30b31635323a",
-  measurementId: "G-85NXYXVQTF"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -22,7 +13,7 @@ Notification.requestPermission().then(permission => {
   if (permission === "granted") {
 
     getToken(messaging, {
-      vapidKey: "BDImJDnwe83EmzpvprB910_UbKKBnkV1EPV5i2vlJpcPUNBBOy5Ij8OTJ-ymr9qqYXomXIOpNEfDfniaHAGuUZc"
+      vapidKey: "..."
     }).then((token) => {
 
       console.log("User Notification Token:", token);
