@@ -2,20 +2,21 @@
   "name": "sehatguideai",
   "type": "module",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "AI Health Chatbot",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^4.22.1",
+    "groq-sdk": "^1.1.1",
     "node-fetch": "^3.3.2"
   }
 }
