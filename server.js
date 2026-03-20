@@ -64,7 +64,7 @@ try {
     fs.readFileSync(path.join(__dirname, "doctors_fallback.json"), "utf-8")
   );
   console.log("✅ doctors_fallback.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ doctors_fallback.json not loaded");
 }
 
@@ -73,7 +73,7 @@ try {
     fs.readFileSync(path.join(__dirname, "vaccine_fallback.json"), "utf-8")
   );
   console.log("✅ vaccine_fallback.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ vaccine_fallback.json not loaded");
 }
 
@@ -82,7 +82,7 @@ try {
     fs.readFileSync(path.join(__dirname, "medicalDatabase.json"), "utf-8")
   );
   console.log("✅ medicalDatabase.json loaded");
-} catch (err) {
+} catch {
   console.log("⚠ medicalDatabase.json not loaded");
 }
 
@@ -95,7 +95,10 @@ app.post("/search-doctor", (req, res) => {
   const specialty = req.body.specialty?.trim();
 
   if (!pin || !specialty) {
-    return res.json({ success: false, message: "PIN and specialty required" });
+    return res.json({
+      success: false,
+      message: "PIN and specialty required",
+    });
   }
 
   const doctorsAtPin = doctorsData[pin] || [];
@@ -106,7 +109,10 @@ app.post("/search-doctor", (req, res) => {
   );
 
   if (!doctors.length) {
-    return res.json({ success: false, message: "No doctors found" });
+    return res.json({
+      success: false,
+      message: "No doctors found",
+    });
   }
 
   res.json({ success: true, doctors });
@@ -129,7 +135,10 @@ app.post("/search-vaccine", (req, res) => {
   );
 
   if (!centers.length) {
-    return res.json({ success: false, message: "No vaccine centers found" });
+    return res.json({
+      success: false,
+      message: "No vaccine centers found",
+    });
   }
 
   res.json({ success: true, centers });
@@ -161,9 +170,12 @@ function checkEmergency(message) {
 
 function findDatabaseAnswer(message) {
   const lowerMsg = message.toLowerCase().trim();
+
   const ignoreWords = ["yes", "no", "ok", "okay", "myself", "4", "5", "6"];
 
-  if (ignoreWords.includes(lowerMsg)) return null;
+  if (ignoreWords.includes(lowerMsg)) {
+    return null;
+  }
 
   for (let entry of medicalData) {
     for (let keyword of entry.keywords) {
@@ -217,18 +229,15 @@ app.post("/chat", async (req, res) => {
       conversationHistory[userId] = [];
     }
 
-    // Save user message
     conversationHistory[userId].push({
       role: "user",
       content: message,
     });
 
-    // Limit memory
     if (conversationHistory[userId].length > 6) {
       conversationHistory[userId].shift();
     }
 
-    // Emergency check
     if (checkEmergency(message)) {
       return res.json({
         reply:
@@ -236,37 +245,47 @@ app.post("/chat", async (req, res) => {
       });
     }
 
-    // Database check
     const dbResult = findDatabaseAnswer(message);
     if (dbResult) {
       return res.json({ reply: dbResult.doctor_reply });
     }
 
+    const chatHistoryText = conversationHistory[userId]
+      .map((msg) => `${msg.role}: ${msg.content}`)
+      .join("\n");
+
     const languageName = langMap[lang] || "English";
 
-    // Groq AI call
+    const prompt = `
+You are SehatGuide AI, a health awareness chatbot.
+
+Rules:
+- Give simple medical guidance.
+- Suggest precautions and home care.
+- DO NOT refuse answering health questions.
+- DO NOT say "I cannot advise".
+- Do not diagnose serious diseases.
+- Always suggest consulting a doctor for serious illness.
+- Reply in ${languageName}.
+- Keep answer short (2-3 lines).
+- Ask 1 follow-up question.
+
+Conversation:
+${chatHistoryText}
+
+Reply to the latest user message.
+`;
+
     const completion = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
-      messages: [
-        {
-          role: "system",
-          content: `You are SehatGuide AI, a helpful health assistant. 
-Give simple advice, precautions, and home care.
-Do not diagnose serious diseases.
-Always suggest consulting a doctor if serious.
-Keep answer short (2-3 lines).
-Ask 1 follow-up question.
-Reply in ${languageName}.`
-        },
-        ...conversationHistory[userId]
-      ]
-    });
+  model: "llama-3.1-8b-instant",
+  messages: [
+    { role: "system", content: "You are SehatGuide AI health assistant." },
+    { role: "user", content: prompt }
+  ]
+});
 
-    const reply =
-      completion.choices?.[0]?.message?.content ||
-      "⚠ No response from AI";
+const reply = completion.choices[0].message.content;
 
-    // Save bot reply
     conversationHistory[userId].push({
       role: "assistant",
       content: reply,
@@ -285,11 +304,9 @@ Reply in ${languageName}.`
 });
 
 /* =======================================================
-   START SERVER (RENDER READY)
+   START SERVER
 ======================================================= */
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("✅ Server running on http://localhost:3000");
 });
