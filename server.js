@@ -229,6 +229,45 @@ Reply to the latest user message.
   }
 });
 
+// ---------------- FCM NOTIFICATIONS ----------------
+
+import admin from "firebase-admin";
+
+let deviceTokens = []; // Store FCM tokens
+
+// Initialize Firebase Admin
+if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+  console.error("❌ FIREBASE_SERVICE_ACCOUNT missing in env");
+} else {
+  admin.initializeApp({
+    credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT))
+  });
+}
+
+// Register device token
+app.post("/register-token", (req, res) => {
+  const { token } = req.body;
+  if (token && !deviceTokens.includes(token)) deviceTokens.push(token);
+  console.log("✅ Token registered:", token);
+  res.json({ success: true });
+});
+
+// Send test notification
+app.get("/send-test-notification", async (req, res) => {
+  try {
+    for (let token of deviceTokens) {
+      await admin.messaging().send({
+        token,
+        notification: { title: "SehatGuide AI", body: "Notifications are working!" }
+      });
+    }
+    res.json({ success: true, message: "Notifications sent!" });
+  } catch (err) {
+    console.error(err);
+    res.json({ success: false, message: "Error sending notifications" });
+  }
+});
+
 /* =======================================================
    START SERVER
 ======================================================= */
