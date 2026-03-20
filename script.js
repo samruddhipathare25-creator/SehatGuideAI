@@ -267,9 +267,58 @@ function showNextAlert() {
 // ===============================
 // 🩺 SYMPTOM CHECKER
 // ===============================
+// ----- Disease Database -----
 const diseaseDatabase = [
-  { symptoms: ["fever","cough","sore throat","runny nose"], disease: "Common Cold", advice: "Rest and drink warm fluids." },
-  { symptoms: ["fever","cough","body pain"], disease: "Flu", advice: "Take rest and drink fluids." }
+  {
+    symptoms: ["fever","cough","sore throat","runny nose","headache","fatigue"],
+    disease: "Common Cold",
+    advice: "Rest, drink warm fluids, use saline nasal spray, and take paracetamol if needed."
+  },
+  {
+    symptoms: ["fever","cough","body pain","headache","chills","fatigue"],
+    disease: "Flu (Influenza)",
+    advice: "Take rest, drink fluids, use paracetamol for fever, and consult a doctor if symptoms worsen."
+  },
+  {
+    symptoms: ["high fever","rash","body pain","joint pain","red eyes","headache"],
+    disease: "Dengue",
+    advice: "Stay hydrated, rest, avoid aspirin/ibuprofen, and see a doctor immediately if bleeding occurs."
+  },
+  {
+    symptoms: ["fever","cough","breathlessness","loss of smell","loss of taste","fatigue"],
+    disease: "COVID-19",
+    advice: "Isolate, monitor oxygen levels, take rest, hydrate, and consult a doctor if symptoms worsen."
+  },
+  {
+    symptoms: ["abdominal pain","nausea","vomiting","diarrhea","fever"],
+    disease: "Gastroenteritis",
+    advice: "Stay hydrated, eat light food, and consult a doctor if diarrhea persists or dehydration occurs."
+  },
+  {
+    symptoms: ["itchy eyes","runny nose","sneezing","cough","watery eyes"],
+    disease: "Allergic Rhinitis",
+    advice: "Avoid allergens, take antihistamines if needed, and consult an allergist if persistent."
+  },
+  {
+    symptoms: ["chest pain","shortness of breath","fatigue","dizziness","sweating"],
+    disease: "Heart Attack",
+    advice: "Call emergency services immediately. Do not ignore symptoms."
+  },
+  {
+    symptoms: ["frequent urination","increased thirst","blurred vision","fatigue","weight loss"],
+    disease: "Diabetes",
+    advice: "Consult a doctor, monitor blood sugar regularly, and maintain a healthy diet and exercise."
+  },
+  {
+    symptoms: ["headache","nausea","sensitivity to light","visual disturbances","fatigue"],
+    disease: "Migraine",
+    advice: "Rest in a dark room, hydrate, take prescribed medication, and avoid triggers like stress or certain foods."
+  },
+  {
+    symptoms: ["sore throat","cough","fever","swollen lymph nodes","body ache"],
+    disease: "Strep Throat",
+    advice: "Consult a doctor for antibiotics, rest, and drink warm fluids."
+  }
 ];
 
 function checkSymptoms() {
@@ -739,3 +788,32 @@ function snooze(index) {
   medicines[index].time = `${h}:${m}`;
   renderMedicines();
 }
+
+// ===============================
+// ⏰ MEDICINE REMINDER TIMER
+// ===============================
+function startMedicineTimer() {
+  if(Notification.permission !== "granted"){
+    Notification.requestPermission();
+  }
+
+  setInterval(() => {
+    const now = new Date();
+    const currentTime =
+      now.getHours().toString().padStart(2,"0")+":"+
+      now.getMinutes().toString().padStart(2,"0");
+
+    medicines.forEach((med, index) => {
+      // Only notify if not taken
+      if(!med.taken && med.time === currentTime){
+        new Notification("💊 Medicine Reminder", {
+          body: `Time to take ${med.name} (${med.dose}) ${med.food}`,
+        });
+      }
+    });
+
+  }, 60000); // check every 60 seconds
+}
+
+// start timer after page loads
+window.addEventListener("load", startMedicineTimer);
