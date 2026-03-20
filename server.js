@@ -1,15 +1,20 @@
+// server.js
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
 import dotenv from "dotenv";
 import cors from "cors";
-import Groq from "groq-sdk";
+import { createRequire } from "module"; // <-- Fix for CommonJS modules
 
 dotenv.config();
 
+// Use require for groq-sdk
+const require = createRequire(import.meta.url);
+const Groq = require("groq-sdk");
+
 if (!process.env.GROQ_API_KEY) {
-  console.error("❌ GROQ_API_KEY missing in .env file");
+  console.error("❌ GROQ_API_KEY missing in environment variables");
 }
 
 const app = express();
@@ -20,36 +25,19 @@ app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve frontend
+// Serve frontend static files
 app.use(express.static(__dirname));
 
 /* =======================================================
    ROUTES
 ======================================================= */
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "login.html"));
-});
-
-app.get("/doctors_fallback.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "doctors_fallback.json"));
-});
-
-app.get("/vaccine_fallback.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "vaccine_fallback.json"));
-});
-
-app.get("/outbreaks.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "outbreaks.json"));
-});
-
-app.get("/api/test", (req, res) => {
-  res.json({ msg: "Server working ✅" });
-});
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
+app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "login.html")));
+app.get("/doctors_fallback.json", (req, res) => res.sendFile(path.join(__dirname, "doctors_fallback.json")));
+app.get("/vaccine_fallback.json", (req, res) => res.sendFile(path.join(__dirname, "vaccine_fallback.json")));
+app.get("/outbreaks.json", (req, res) => res.sendFile(path.join(__dirname, "outbreaks.json")));
+app.get("/api/test", (req, res) => res.json({ msg: "Server working ✅" }));
 
 /* =======================================================
    LOAD JSON FILES
@@ -60,27 +48,21 @@ let vaccineData = {};
 let medicalData = [];
 
 try {
-  doctorsData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "doctors_fallback.json"), "utf-8")
-  );
+  doctorsData = JSON.parse(fs.readFileSync(path.join(__dirname, "doctors_fallback.json"), "utf-8"));
   console.log("✅ doctors_fallback.json loaded");
 } catch {
   console.log("⚠ doctors_fallback.json not loaded");
 }
 
 try {
-  vaccineData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "vaccine_fallback.json"), "utf-8")
-  );
+  vaccineData = JSON.parse(fs.readFileSync(path.join(__dirname, "vaccine_fallback.json"), "utf-8"));
   console.log("✅ vaccine_fallback.json loaded");
 } catch {
   console.log("⚠ vaccine_fallback.json not loaded");
 }
 
 try {
-  medicalData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "medicalDatabase.json"), "utf-8")
-  );
+  medicalData = JSON.parse(fs.readFileSync(path.join(__dirname, "medicalDatabase.json"), "utf-8"));
   console.log("✅ medicalDatabase.json loaded");
 } catch {
   console.log("⚠ medicalDatabase.json not loaded");
@@ -95,24 +77,14 @@ app.post("/search-doctor", (req, res) => {
   const specialty = req.body.specialty?.trim();
 
   if (!pin || !specialty) {
-    return res.json({
-      success: false,
-      message: "PIN and specialty required",
-    });
+    return res.json({ success: false, message: "PIN and specialty required" });
   }
 
   const doctorsAtPin = doctorsData[pin] || [];
-
-  const doctors = doctorsAtPin.filter(
-    (doc) =>
-      (doc.specialty || "").toLowerCase() === specialty.toLowerCase()
-  );
+  const doctors = doctorsAtPin.filter(doc => (doc.specialty || "").toLowerCase() === specialty.toLowerCase());
 
   if (!doctors.length) {
-    return res.json({
-      success: false,
-      message: "No doctors found",
-    });
+    return res.json({ success: false, message: "No doctors found" });
   }
 
   res.json({ success: true, doctors });
@@ -126,19 +98,12 @@ app.post("/search-vaccine", (req, res) => {
   const pin = req.body.pin?.toString().trim();
   const minAge = parseInt(req.body.minAge) || 0;
 
-  if (!pin) {
-    return res.json({ success: false, message: "PIN required" });
-  }
+  if (!pin) return res.json({ success: false, message: "PIN required" });
 
-  const centers = (vaccineData[pin] || []).filter(
-    (center) => minAge >= (center.min_age_limit ?? 0)
-  );
+  const centers = (vaccineData[pin] || []).filter(center => minAge >= (center.min_age_limit ?? 0));
 
   if (!centers.length) {
-    return res.json({
-      success: false,
-      message: "No vaccine centers found",
-    });
+    return res.json({ success: false, message: "No vaccine centers found" });
   }
 
   res.json({ success: true, centers });
@@ -149,19 +114,8 @@ app.post("/search-vaccine", (req, res) => {
 ======================================================= */
 
 function checkEmergency(message) {
-  const emergencyKeywords = [
-    "chest pain",
-    "breathing problem",
-    "unconscious",
-    "seizure",
-    "heavy bleeding",
-    "heart attack",
-    "stroke",
-  ];
-
-  return emergencyKeywords.some((word) =>
-    message.toLowerCase().includes(word)
-  );
+  const emergencyKeywords = ["chest pain", "breathing problem", "unconscious", "seizure", "heavy bleeding", "heart attack", "stroke"];
+  return emergencyKeywords.some(word => message.toLowerCase().includes(word));
 }
 
 /* =======================================================
@@ -170,18 +124,13 @@ function checkEmergency(message) {
 
 function findDatabaseAnswer(message) {
   const lowerMsg = message.toLowerCase().trim();
-
   const ignoreWords = ["yes", "no", "ok", "okay", "myself", "4", "5", "6"];
 
-  if (ignoreWords.includes(lowerMsg)) {
-    return null;
-  }
+  if (ignoreWords.includes(lowerMsg)) return null;
 
   for (let entry of medicalData) {
     for (let keyword of entry.keywords) {
-      if (lowerMsg.includes(keyword.toLowerCase())) {
-        return entry;
-      }
+      if (lowerMsg.includes(keyword.toLowerCase())) return entry;
     }
   }
 
@@ -198,9 +147,7 @@ let conversationHistory = {};
    GROQ AI SETUP
 ======================================================= */
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const langMap = {
   en: "English",
@@ -221,37 +168,22 @@ app.post("/chat", async (req, res) => {
     const lang = req.body.lang || "en";
     const userId = req.body.userId || "default";
 
-    if (!message) {
-      return res.json({ reply: "❌ Message empty" });
-    }
+    if (!message) return res.json({ reply: "❌ Message empty" });
 
-    if (!conversationHistory[userId]) {
-      conversationHistory[userId] = [];
-    }
+    if (!conversationHistory[userId]) conversationHistory[userId] = [];
+    conversationHistory[userId].push({ role: "user", content: message });
 
-    conversationHistory[userId].push({
-      role: "user",
-      content: message,
-    });
-
-    if (conversationHistory[userId].length > 6) {
-      conversationHistory[userId].shift();
-    }
+    if (conversationHistory[userId].length > 6) conversationHistory[userId].shift();
 
     if (checkEmergency(message)) {
-      return res.json({
-        reply:
-          "⚠ This may be a medical emergency. Please visit a hospital immediately.",
-      });
+      return res.json({ reply: "⚠ This may be a medical emergency. Please visit a hospital immediately." });
     }
 
     const dbResult = findDatabaseAnswer(message);
-    if (dbResult) {
-      return res.json({ reply: dbResult.doctor_reply });
-    }
+    if (dbResult) return res.json({ reply: dbResult.doctor_reply });
 
     const chatHistoryText = conversationHistory[userId]
-      .map((msg) => `${msg.role}: ${msg.content}`)
+      .map(msg => `${msg.role}: ${msg.content}`)
       .join("\n");
 
     const languageName = langMap[lang] || "English";
@@ -277,28 +209,22 @@ Reply to the latest user message.
 `;
 
     const completion = await groq.chat.completions.create({
-  model: "llama-3.1-8b-instant",
-  messages: [
-    { role: "system", content: "You are SehatGuide AI health assistant." },
-    { role: "user", content: prompt }
-  ]
-});
-
-const reply = completion.choices[0].message.content;
-
-    conversationHistory[userId].push({
-      role: "assistant",
-      content: reply,
+      model: "llama-3.1-8b-instant",
+      messages: [
+        { role: "system", content: "You are SehatGuide AI health assistant." },
+        { role: "user", content: prompt }
+      ]
     });
 
-    res.json({ reply });
+    const reply = completion.choices[0].message.content;
 
+    conversationHistory[userId].push({ role: "assistant", content: reply });
+
+    res.json({ reply });
   } catch (err) {
     console.error("❌ Groq Error:", err);
-
     res.status(200).json({
-      reply:
-        "⚠ I am unable to answer right now. Please consult a qualified doctor.",
+      reply: "⚠ I am unable to answer right now. Please consult a qualified doctor.",
     });
   }
 });
@@ -307,6 +233,7 @@ const reply = completion.choices[0].message.content;
    START SERVER
 ======================================================= */
 
-app.listen(3000, () => {
-  console.log("✅ Server running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
