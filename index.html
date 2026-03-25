@@ -21,7 +21,6 @@
 </head>
 <body>
   <div id="sidebar" class="sidebar">
-
   <div class="sidebar-header">
     <span>SehatGuide AI</span>
     <button onclick="toggleSidebar()">✕</button>
@@ -31,19 +30,14 @@
     <div id="sidebarUserEmail">Not logged in</div>
     <button class="logoutBtn" onclick="logout()">Logout</button>
   </div>
-
   <hr>
-
-
   <a href="#about">About</a>
   <a href="#doctorSection">Doctors</a>
   <a href="#vaccinationSection">Vaccines</a>
    <a href="#aisymptomcheckerSection">AI Symptom Checker</a>
    <a href="#medicineReminder">Medicine Reminder</a>
   <a href="#telemedicine">Telemedicine</a>
-
 </div>
-
   <div class="bg"></div>
 
   <!-- NAVBAR -->
@@ -132,7 +126,6 @@
       </div>
     </div>
 <section id="about" class="about-section" style="padding:50px 20px; background: radial-gradient(circle at top, #1c2a6b, #070b18); color:white;">
-
   <h2 style="text-align:center; margin-bottom:50px; font-size:2.2em;">About SehatGuide AI</h2>
 
   <!-- Section 1: Intelligent Health Assistant -->
@@ -170,7 +163,6 @@
       </p>
     </div>
   </div>
-
 </section>
 
   <!-- VACCINATION -->
@@ -213,40 +205,27 @@
     <div id="symptomResult"></div> <!-- Result goes here -->
   </div>
 </section>
-
-
-
   <section id="medicineReminder" class="schedule-section">
 
 <div class="medicine-card">
-  
-
 <h2>💊 Medicine Reminder</h2>
-
 <input type="text" id="medName" placeholder="Medicine Name">
-
 <input type="text" id="medDose" placeholder="Dosage (ex: 1 tablet)">
-
 <input type="time" id="medTime">
-
 <select id="foodType">
 <option>Before Food</option>
 <option>After Food</option>
 </select>
-
 <select id="repeatType">
 <option>Once</option>
 <option>Daily</option>
 </select>
-
 <button onclick="addMedicine()">➕ Set Reminder</button>
 
 <h3>Today's Medicines</h3>
 <div id="medicineList"></div>
 <div id="medicineList" class="medicine-list"></div>
-
 </div>
-
 </section>
 
   <!-- TELEMEDICINE -->
@@ -254,19 +233,19 @@
     <h2>Free Options with Real Doctors</h2>
     <div class="telemedicine-cards">
       <div class="tele-card">
-        <img src="images/mfine.png" alt="MFine">
+        <img src="images/MFine.png" alt="MFine">
         <h3>MFine</h3>
         <p>Consult real doctors online through MFine platform.</p>
         <a href="https://www.mfine.co/" target="_blank">Consult Now</a>
       </div>
       <div class="tele-card">
-        <img src="images/practo.png" alt="Practo">
+        <img src="images/Practo.png" alt="Practo">
         <h3>Practo</h3>
         <p>Book appointments and consult verified doctors online.</p>
         <a href="https://www.practo.com/" target="_blank">Consult Now</a>
       </div>
       <div class="tele-card">
-        <img src="images/esanjeevani.png" alt="eSanjeevani">
+        <img src="images/eSanjeevani.png" alt="eSanjeevani">
         <h3>eSanjeevani</h3>
         <p>Government free telemedicine consultation service.</p>
         <a href="https://esanjeevani.mohfw.gov.in/" target="_blank">Consult Free</a>
@@ -309,7 +288,6 @@
   <script src="translations.js"></script>
   <script src="script.js"></script>
   
-
   <!-- POPUP -->
 <div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000;">
   <div style="background:#3b4464; color:white; padding:20px; border-radius:10px; max-width:500px; width:90%;">
@@ -318,18 +296,14 @@
     <button id="closePopup" style="margin-top:15px; padding:5px 10px;">Close</button>
   </div>
 </div>
-
 <button onclick="testNotification()">Test Notification</button>
-
 <script>
 /* APP STYLE SECTION SWITCH */
 
 document.addEventListener("DOMContentLoaded", function(){
-
   const sections = document.querySelectorAll(
     "#about, #doctorSection, #vaccinationSection, .aisymptomcheckersection, #telemedicine,#medicineReminder"
   );
-
   // hide all sections at start
   sections.forEach(sec=>{
     sec.style.display = "none";
@@ -357,10 +331,8 @@ document.addEventListener("DOMContentLoaded", function(){
         activeSection.style.display = "block";
         activeSection.scrollIntoView({behavior:"smooth"});
       }
-
     });
   });
-
 });
 </script>
 <script type="module" src="firebase.js"></script>
